@@ -20,15 +20,15 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1755530532132">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1755535601784">
 
-<link rel="stylesheet" href="/css/style.css?v=1755530532132">
+<link rel="stylesheet" href="/css/style.css?v=1755535601784">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1755530532132">
+        <link rel="stylesheet" href="/custom.css?v=1755535601784">
     
 
 
@@ -38,7 +38,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1755530532132"></script>
+<script async src="/js/app.js?v=1755535601784"></script>
 
  
 
@@ -107,7 +107,7 @@ var _hmt = _hmt || [];
 </div>
 
 
-	<script async src="/js/search.js?v=1755530532132"></script>
+	<script async src="/js/search.js?v=1755535601784"></script>
 
 
 
@@ -312,7 +312,6 @@ var _hmt = _hmt || [];
     
     document.getElementById('runtime-text').innerText = text;
   }
-
   // 初始加载立即执行
   updateRuntime();
   // 每秒更新一次
@@ -320,63 +319,61 @@ var _hmt = _hmt || [];
 </script>
 
 <div id="site-runtime" style="font-size:14px;color:#666;padding:8px;border-radius:6px;">
-  实时访客: <span id="realtime-uv">--</span>
-  <br>
-  今日浏览量: <span id="today-pv">--</span>
+  📊 今日浏览量: <span id="today-pv">加载中...</span>
+  <button onclick="fetchPVData()" style="margin-left:10px;padding:2px 5px;font-size:12px;">刷新</button>
 </div>
+
 <script>
-  // 百度API请求函数
-  async function fetchBaiduStats() {
-    const API_KEY = "5x964unnQzgeHK2f8q46uafMCAiFqfHi";
-    const SECRET_KEY = "CLKOm88mroXM2uKN08FDAeeLlfMAERWN";
-    const SITE_ID = "22337939";
-    // 1. 生成签名（百度API要求）
-    const now = Math.floor(Date.now() / 1000);
-    const signStr = `${API_KEY}${now}${SECRET_KEY}`;
-    const sign = CryptoJS.MD5(signStr).toString();
-    // 2. 请求实时数据
-    try {
-      const res = await fetch("https://api.baidu.com/json/tongji/v1/ReportService/getData", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          header: {
-            username: API_KEY,
-            password: sign,
-            timestamp: now,
-            account_type: 1
-          },
-          body: {
-            site_id: SITE_ID,
-            method: "trend/time/a",
-            start_date: "today",
-            end_date: "today",
-            metrics: "pv_count,visitor_count"
-          }
-        })
-      });
-      const data = await res.json();
-      // 3. 更新页面显示
-      if (data.body?.data?.[0]?.result?.items) {
-        const items = data.body.data[0].result.items;
-        document.getElementById("realtime-uv").innerText = items[0][0] || "0";  // 实时UV
-        document.getElementById("today-pv").innerText = items[1][0] || "0";   // 今日PV
-      }
-    } catch (e) {
-      console.error("百度统计API请求失败:", e);
-    }
+  // 配置参数
+  const ACCESS_TOKEN = "121.c6116bfc67b9e1d582f7f45f09bd19c6.YGUJmc3MHdS3f_vE0PBUuVIa2ZpzBUQO-5gYkO5.KCrGQw";
+  const SITE_ID = "22337939";
+
+  function getDateRange() {
+    const today = new Date();
+    const yesterday = new Date(today);
+    yesterday.setDate(today.getDate() - 1);
+    
+    // 格式化为YYYYMMDD
+    const format = d => d.getFullYear() + 
+      String(d.getMonth() + 1).padStart(2, '0') + 
+      String(d.getDate()).padStart(2, '0');
+    
+    return {
+      start_date: format(yesterday),
+      end_date: format(today)
+    };
   }
 
-  // 加载加密库（用于生成签名）
-  const cryptoScript = document.createElement("script");
-  cryptoScript.src = "https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js";
-  cryptoScript.onload = () => {
-    // 初始加载数据
-    fetchBaiduStats();
-    // 每5分钟刷新一次（避免频繁请求）
-    setInterval(fetchBaiduStats, 300000);
+  // 获取PV数据（强制使用多日范围）
+function fetchPVData() {
+  const { start_date, end_date } = getDateRange(); // 动态获取日期范围
+  const script = document.createElement('script');
+  
+  window.handleBaiduData = function(data) {
+    if (data.result?.items?.[1]?.[1]?.[0]) { // 取今日数据（数组最后一个元素）
+      const todayPV = data.result.items[1][1][0]; 
+      document.getElementById("today-pv").innerText = todayPV;
+    } else {
+      document.getElementById("today-pv").innerText = "数据异常";
+    }
+    script.remove();
   };
-  document.head.appendChild(cryptoScript);
+
+  script.src = `https://openapi.baidu.com/rest/2.0/tongji/report/getData?
+    access_token=${ACCESS_TOKEN}&
+    site_id=${SITE_ID}&
+    start_date=${start_date}&
+    end_date=${end_date}&
+    metrics=pv_count&
+    method=overview/getTimeTrendRpt&
+    callback=handleBaiduData`.replace(/\s+/g, '');
+  
+  document.body.appendChild(script);
+}
+
+  // 初始加载 + 每30分钟刷新
+  fetchPVData();
+  setInterval(fetchPVData, 1800000);
 </script>
 
     </div>
