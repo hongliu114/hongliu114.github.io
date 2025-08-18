@@ -20,15 +20,15 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1755535601781">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1755541388234">
 
-<link rel="stylesheet" href="/css/style.css?v=1755535601781">
+<link rel="stylesheet" href="/css/style.css?v=1755541388234">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1755535601781">
+        <link rel="stylesheet" href="/custom.css?v=1755541388234">
     
 
 
@@ -38,7 +38,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1755535601781"></script>
+<script async src="/js/app.js?v=1755541388234"></script>
 
  
 
@@ -107,7 +107,7 @@ var _hmt = _hmt || [];
 </div>
 
 
-	<script async src="/js/search.js?v=1755535601781"></script>
+	<script async src="/js/search.js?v=1755541388234"></script>
 
 
 
@@ -322,33 +322,25 @@ var _hmt = _hmt || [];
   📊 今日浏览量: <span id="today-pv">加载中...</span>
   <button onclick="fetchPVData()" style="margin-left:10px;padding:2px 5px;font-size:12px;">刷新</button>
 </div>
-
 <script>
-  // 配置参数
   const ACCESS_TOKEN = "121.c6116bfc67b9e1d582f7f45f09bd19c6.YGUJmc3MHdS3f_vE0PBUuVIa2ZpzBUQO-5gYkO5.KCrGQw";
   const SITE_ID = "22337939";
-
   function getDateRange() {
     const today = new Date();
     const yesterday = new Date(today);
     yesterday.setDate(today.getDate() - 1);
-    
-    // 格式化为YYYYMMDD
     const format = d => d.getFullYear() + 
       String(d.getMonth() + 1).padStart(2, '0') + 
       String(d.getDate()).padStart(2, '0');
-    
     return {
       start_date: format(yesterday),
       end_date: format(today)
     };
   }
-
-  // 获取PV数据（强制使用多日范围）
-function fetchPVData() {
+  // 获取PV数据
+  function fetchPVData() {
   const { start_date, end_date } = getDateRange(); // 动态获取日期范围
   const script = document.createElement('script');
-  
   window.handleBaiduData = function(data) {
     if (data.result?.items?.[1]?.[1]?.[0]) { // 取今日数据（数组最后一个元素）
       const todayPV = data.result.items[1][1][0]; 
@@ -358,7 +350,6 @@ function fetchPVData() {
     }
     script.remove();
   };
-
   script.src = `https://openapi.baidu.com/rest/2.0/tongji/report/getData?
     access_token=${ACCESS_TOKEN}&
     site_id=${SITE_ID}&
@@ -367,13 +358,11 @@ function fetchPVData() {
     metrics=pv_count&
     method=overview/getTimeTrendRpt&
     callback=handleBaiduData`.replace(/\s+/g, '');
-  
   document.body.appendChild(script);
 }
-
-  // 初始加载 + 每30分钟刷新
+  // 初始加载 + 每10分钟刷新
   fetchPVData();
-  setInterval(fetchPVData, 1800000);
+  setInterval(fetchPVData, 600000);
 </script>
 
     </div>
@@ -381,7 +370,7 @@ function fetchPVData() {
     <div class="nexmoe-post">
         <a href="/2025/08/17/%E3%80%90%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0%E3%80%91%E5%A4%8D%E5%8F%98%E5%87%BD%E6%95%B0%E4%B8%8E%E7%A7%AF%E5%88%86%E5%8F%98%E6%8D%A2/">
             
-                <div class="nexmoe-post-cover mdui-ripple absolute" style="padding-top: 29.166666666666668%;"> 
+                <div class="nexmoe-post-cover mdui-ripple absolute" style="padding-top: 45.83333333333333%;"> 
                     <img src="/image/banner_4.jpg" alt="【知识笔记】复变函数与积分变换" loading="lazy">
                     <h1>【知识笔记】复变函数与积分变换</h1>
                 </div>
@@ -414,7 +403,7 @@ function fetchPVData() {
     <div class="nexmoe-post">
         <a href="/2025/08/17/%E3%80%90%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0%E3%80%91%E6%A8%A1%E6%8B%9F%E7%94%B5%E5%AD%90%E6%8A%80%E6%9C%AF%E5%9F%BA%E7%A1%80/">
             
-                <div class="nexmoe-post-cover mdui-ripple absolute" style="padding-top: 29.166666666666668%;"> 
+                <div class="nexmoe-post-cover mdui-ripple absolute" style="padding-top: 45.83333333333333%;"> 
                     <img src="/image/banner_3.jpg" alt="【知识笔记】模拟电子技术基础" loading="lazy">
                     <h1>【知识笔记】模拟电子技术基础</h1>
                 </div>

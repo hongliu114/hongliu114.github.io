@@ -14,7 +14,7 @@
 <meta property="og:description" content="和朋友讨论了关于自己和学校、关于一个或者很多个机器人队队伍。 大二的第二个学期已经结束了，虽然还有电赛作为余韵盘旋在暑假里，回响着一个大二学生在学校大众宣传中应有的“激情”，虽然一个长久但是又生分的机器人队正在等待一代新的老队员的推进；两年时间足够做好和做烂很多事，事实也的确如此，而我也有很多体验想要抒发。这里是一个并不会很好组织言辞的工科男，一颗 maigo 的心。 学校评价体系和评价学校体系在">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2025-08-16T03:48:59.000Z">
-<meta property="article:modified_time" content="2025-08-16T17:30:17.933Z">
+<meta property="article:modified_time" content="2025-08-18T17:57:01.033Z">
 <meta property="article:author" content="HongLiu">
 <meta property="article:tag" content="RM">
 <meta property="article:tag" content="杂谈">
@@ -24,15 +24,15 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1755535601765">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1755541388218">
 
-<link rel="stylesheet" href="/css/style.css?v=1755535601765">
+<link rel="stylesheet" href="/css/style.css?v=1755541388218">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1755535601765">
+        <link rel="stylesheet" href="/custom.css?v=1755541388218">
     
 
 
@@ -42,7 +42,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1755535601765"></script>
+<script async src="/js/app.js?v=1755541388218"></script>
 
  
 
@@ -111,7 +111,7 @@ var _hmt = _hmt || [];
 </div>
 
 
-	<script async src="/js/search.js?v=1755535601765"></script>
+	<script async src="/js/search.js?v=1755541388219"></script>
 
 
 
@@ -326,33 +326,25 @@ var _hmt = _hmt || [];
   📊 今日浏览量: <span id="today-pv">加载中...</span>
   <button onclick="fetchPVData()" style="margin-left:10px;padding:2px 5px;font-size:12px;">刷新</button>
 </div>
-
 <script>
-  // 配置参数
   const ACCESS_TOKEN = "121.c6116bfc67b9e1d582f7f45f09bd19c6.YGUJmc3MHdS3f_vE0PBUuVIa2ZpzBUQO-5gYkO5.KCrGQw";
   const SITE_ID = "22337939";
-
   function getDateRange() {
     const today = new Date();
     const yesterday = new Date(today);
     yesterday.setDate(today.getDate() - 1);
-    
-    // 格式化为YYYYMMDD
     const format = d => d.getFullYear() + 
       String(d.getMonth() + 1).padStart(2, '0') + 
       String(d.getDate()).padStart(2, '0');
-    
     return {
       start_date: format(yesterday),
       end_date: format(today)
     };
   }
-
-  // 获取PV数据（强制使用多日范围）
-function fetchPVData() {
+  // 获取PV数据
+  function fetchPVData() {
   const { start_date, end_date } = getDateRange(); // 动态获取日期范围
   const script = document.createElement('script');
-  
   window.handleBaiduData = function(data) {
     if (data.result?.items?.[1]?.[1]?.[0]) { // 取今日数据（数组最后一个元素）
       const todayPV = data.result.items[1][1][0]; 
@@ -362,7 +354,6 @@ function fetchPVData() {
     }
     script.remove();
   };
-
   script.src = `https://openapi.baidu.com/rest/2.0/tongji/report/getData?
     access_token=${ACCESS_TOKEN}&
     site_id=${SITE_ID}&
@@ -371,20 +362,18 @@ function fetchPVData() {
     metrics=pv_count&
     method=overview/getTimeTrendRpt&
     callback=handleBaiduData`.replace(/\s+/g, '');
-  
   document.body.appendChild(script);
 }
-
-  // 初始加载 + 每30分钟刷新
+  // 初始加载 + 每10分钟刷新
   fetchPVData();
-  setInterval(fetchPVData, 1800000);
+  setInterval(fetchPVData, 600000);
 </script>
 
     </div>
 </div><!-- .nexmoe-drawer --></div><div id="nexmoe-content"><div class="nexmoe-primary"><div class="nexmoe-post">
   <article>
     
-        <div class="nexmoe-post-cover absolute" style="padding-top: 29.166666666666668%;"> 
+        <div class="nexmoe-post-cover absolute" style="padding-top: 45.83333333333333%;"> 
             <img src="/image/cover_1.jpg" alt="【RM】队伍是学校体系夹缝中的存在" loading="lazy">
             <h1>【RM】队伍是学校体系夹缝中的存在</h1>
         </div>
@@ -450,7 +439,7 @@ function fetchPVData() {
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1755535601736"></script>
+    <script async src="/js/copy-codeblock.js?v=1755541388190"></script>
   
 
   
