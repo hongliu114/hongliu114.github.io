@@ -1,0 +1,491 @@
+<!doctype html>
+<html lang="zh"><head>
+<title>【电赛】25电赛电源题（A题）-一次失败的四天三夜比赛寄录 - HongLiu的小站</title>
+<meta charset="UTF-8">
+<meta name="keywords" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
+
+<link rel="shortcut icon" href="/image/avator_1.jpg" type="image/x-icon" />
+<meta name="description" content="简介本文记录了本人电赛小队队伍情况、赛前准备、赛中进程等内容；我队在本次电赛中斩获了省三等奖的搞笑成绩，但还是决定写下本记录，以供经验总结、警示后世及为未参赛的朋友们提供一点参赛信息。 背景&amp;赛前准备我队小队三人均来自我校RM硬件组队员，掌握基本的电路设计、PCB Layout、STM32嵌入式软件，除我之外两个队友都是大三（本人大二），且他们俩都会一点dsp（虽然后续没实际用上）。由于R">
+<meta property="og:type" content="article">
+<meta property="og:title" content="【电赛】25电赛电源题（A题）-一次失败的四天三夜比赛寄录">
+<meta property="og:url" content="https://hongliu.icu/2025/08/19/%E3%80%90%E7%94%B5%E8%B5%9B%E3%80%9125%E7%94%B5%E8%B5%9B%E7%94%B5%E6%BA%90%E9%A2%98%EF%BC%88A%E9%A2%98%EF%BC%89-%E4%B8%80%E6%AC%A1%E5%A4%B1%E8%B4%A5%E7%9A%84%E5%9B%9B%E5%A4%A9%E4%B8%89%E5%A4%9C%E6%AF%94%E8%B5%9B%E5%AF%84%E5%BD%95/index.html">
+<meta property="og:site_name" content="HongLiu的小站">
+<meta property="og:description" content="简介本文记录了本人电赛小队队伍情况、赛前准备、赛中进程等内容；我队在本次电赛中斩获了省三等奖的搞笑成绩，但还是决定写下本记录，以供经验总结、警示后世及为未参赛的朋友们提供一点参赛信息。 背景&amp;赛前准备我队小队三人均来自我校RM硬件组队员，掌握基本的电路设计、PCB Layout、STM32嵌入式软件，除我之外两个队友都是大三（本人大二），且他们俩都会一点dsp（虽然后续没实际用上）。由于R">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://hongliu.icu/image/post_25diansai/1.png">
+<meta property="og:image" content="https://hongliu.icu/image/post_25diansai/2.png">
+<meta property="og:image" content="https://hongliu.icu/image/post_25diansai/3.png">
+<meta property="og:image" content="https://hongliu.icu/image/post_25diansai/4.jpeg">
+<meta property="og:image" content="https://hongliu.icu/image/post_25diansai/6.png">
+<meta property="og:image" content="https://hongliu.icu/image/post_25diansai/5.jpg">
+<meta property="article:published_time" content="2025-08-19T07:35:01.000Z">
+<meta property="article:modified_time" content="2025-08-19T11:42:06.959Z">
+<meta property="article:author" content="HongLiu">
+<meta property="article:tag" content="日志">
+<meta property="article:tag" content="电赛">
+<meta property="article:tag" content="硬件">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://hongliu.icu/image/post_25diansai/1.png">
+
+<link rel="stylesheet" href="/lib/fancybox/fancybox.css">
+<link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
+
+
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1755604005114">
+
+<link rel="stylesheet" href="/css/style.css?v=1755604005114">
+
+
+
+
+    
+        <link rel="stylesheet" href="/custom.css?v=1755604005114">
+    
+
+
+
+<script src="/lib/mdui_043tiny/mdui.js" async></script>
+<script src="/lib/fancybox/fancybox.umd.js" async></script>
+<script src="/lib/lax.min.js" async></script>
+
+
+<script async src="/js/app.js?v=1755604005114"></script>
+
+ 
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?ee747b5c2e5f5223579bf6411c469fb6";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+<link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/atom-one-dark.min.css">
+<meta name="generator" content="Hexo 7.3.0"></head><body class="nexmoe mdui-drawer-body-left"><div id="nexmoe-background"><div class="nexmoe-bg" style="background-image: url(/image/banner_2.png)"></div><div class="mdui-appbar mdui-shadow-0"><div class="mdui-toolbar"><a class="mdui-btn mdui-btn-icon mdui-ripple" mdui-drawer="{target: &#039;#drawer&#039;, swipe: true}" title="menu"><i class="mdui-icon nexmoefont icon-menu"></i></a><div class="mdui-toolbar-spacer"></div><a class="mdui-btn mdui-btn-icon" href="/" title="HongLiu"><img src="/image/avator_1.jpg" alt="HongLiu"></a></div></div></div><div id="nexmoe-header"><div class="nexmoe-drawer mdui-drawer" id="drawer">
+    <div class="nexmoe-avatar mdui-ripple">
+        <a href="/" title="HongLiu">
+            <img src="/image/avator_1.jpg" alt="HongLiu" alt="HongLiu">
+        </a>
+    </div>
+    <div class="nexmoe-count">
+        <div><span>文章</span>6</div>
+        <div><span>标签</span>11</div>
+        <div><span>分类</span>3</div>
+    </div>
+    <div class="nexmoe-list mdui-list" mdui-collapse="{accordion: true}">
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/" title="首页">
+            <i class="mdui-list-item-icon nexmoefont icon-home"></i>
+            <div class="mdui-list-item-content">
+                首页
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/archive" title="文章归档">
+            <i class="mdui-list-item-icon nexmoefont icon-container"></i>
+            <div class="mdui-list-item-content">
+                文章归档
+            </div>
+        </a>
+        
+        <a class="nexmoe-list-item mdui-list-item mdui-ripple false" href="/about" title="关于">
+            <i class="mdui-list-item-icon nexmoefont icon-info-circle"></i>
+            <div class="mdui-list-item-content">
+                关于
+            </div>
+        </a>
+        
+    </div>
+    
+    
+        
+        <div class="nexmoe-widget-wrap">
+    <div class="nexmoe-widget nexmoe-search">
+        
+            <form id="search_form">
+                <label><input class="st-default-search-input" id="search_value" name="q" type="search" placeholder="搜索" style="
+                    font-size: 15px !important;
+                    height: 56px !important;
+                    background-image: none;
+                "></label>
+            </form>
+         
+    </div>
+</div>
+
+
+	<script async src="/js/search.js?v=1755604005115"></script>
+
+
+
+    
+        
+        <div class="nexmoe-widget-wrap">
+	<div class="nexmoe-widget nexmoe-social">
+		<a
+			class="mdui-ripple"
+			href="https://qm.qq.com/q/BqxvpkC1fG"
+			target="_blank"
+			mdui-tooltip="{content: 'QQ'}"
+			style="
+				color: rgb(249, 174, 8);
+				background-color: rgba(249, 174, 8, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-QQ"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://space.bilibili.com/412489247"
+			target="_blank"
+			mdui-tooltip="{content: '哔哩哔哩'}"
+			style="
+				color: rgb(231, 106, 141);
+				background-color: rgba(231, 106, 141, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-bilibili"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://github.com/hongliu114"
+			target="_blank"
+			mdui-tooltip="{content: 'GitHub'}"
+			style="
+				color: rgb(25, 23, 23);
+				background-color: rgba(25, 23, 23, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-github"
+			></i> </a
+		><a
+			class="mdui-ripple"
+			href="https://www.zhihu.com/people/dai-fu-dian-de-fan-zhi-zi"
+			target="_blank"
+			mdui-tooltip="{content: '知乎'}"
+			style="
+				color: rgb(30, 136, 229);
+				background-color: rgba(30, 136, 229, .1);
+			"
+		>
+			<i
+				class="nexmoefont icon-zhihu"
+			></i> </a
+		>
+	</div>
+</div>
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章分类</h3>
+    <div class="nexmoe-widget">
+
+      <ul class="category-list">
+
+        
+
+
+        
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/其他/">其他</a>
+          <span class="category-list-count">1</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/杂谈/">杂谈</a>
+          <span class="category-list-count">3</span>
+        </li>
+
+        
+
+        <li class="category-list-item">
+          <a class="category-list-link" href="/categories/知识笔记/">知识笔记</a>
+          <span class="category-list-count">2</span>
+        </li>
+
+        
+      </ul>
+
+    </div>
+  </div>
+
+
+    
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <div id="randomtagcloud" class="nexmoe-widget tagcloud nexmoe-rainbow">
+      <a href="/tags/RM/" style="font-size: 15px;">RM</a> <a href="/tags/%E5%A4%8D%E5%8F%98/" style="font-size: 10px;">复变</a> <a href="/tags/%E6%95%B0%E5%AD%A6/" style="font-size: 10px;">数学</a> <a href="/tags/%E6%97%A5%E5%BF%97/" style="font-size: 20px;">日志</a> <a href="/tags/%E6%9D%82%E8%B0%88/" style="font-size: 15px;">杂谈</a> <a href="/tags/%E6%A8%A1%E7%94%B5/" style="font-size: 10px;">模电</a> <a href="/tags/%E7%94%B5%E5%AD%90/" style="font-size: 10px;">电子</a> <a href="/tags/%E7%94%B5%E8%B5%9B/" style="font-size: 10px;">电赛</a> <a href="/tags/%E7%A1%AC%E4%BB%B6/" style="font-size: 10px;">硬件</a> <a href="/tags/%E7%AC%94%E8%AE%B0/" style="font-size: 15px;">笔记</a> <a href="/tags/%E7%BD%91%E7%AB%99/" style="font-size: 10px;">网站</a>
+    </div>
+    
+      <script>
+        var maxTagcloud = parseInt(17);
+        var tags_length = parseInt(11);
+        var tags_arr = [];
+        for(var i = 0; i < tags_length; i++){
+          tags_arr.push(i);
+        }
+        tags_arr.sort(function (l, r) {
+          return Math.random() > 0.5 ? -1 : 1;
+        });
+        tags_arr = tags_arr.slice(0, maxTagcloud < tags_length ? tags_length - maxTagcloud : 0);
+        for(var tag_i = 0; tag_i < tags_arr.length; tag_i++){
+          document.getElementById("randomtagcloud").children[tags_arr[tag_i]].style.display = 'none';
+        }
+      </script>
+    
+  </div>
+
+    
+        
+        
+        
+  <div class="nexmoe-widget-wrap">
+    <h3 class="nexmoe-widget-title">文章归档</h3>
+    <div class="nexmoe-widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/08/">八月 2025</a><span class="archive-list-count">6</span></li></ul>
+    </div>
+  </div>
+
+
+
+    
+        
+        
+   
+    <div class="nexmoe-copyright">
+        &copy; 2025 HongLiu
+        Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+        & <a href="https://github.com/theme-nexmoe/hexo-theme-nexmoe" target="_blank">Nexmoe</a>
+        <div id="site-runtime" style="font-size:14px;color:#666;padding:8px;border-radius:6px;">
+  本站已运行: <span id="runtime-text">计算中...</span>
+</div>
+<script>
+  function updateRuntime() {
+    const siteLaunchDate = new Date('2025-08-15T01:25:00'); // 替换为您的建站时间
+    const now = new Date();
+    const diff = now - siteLaunchDate;
+
+    const years = Math.floor(diff / (1000 * 60 * 60 * 24 * 365));
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24) % 365);
+    const hours = Math.floor(diff / (1000 * 60 * 60) % 24);
+    const minutes = Math.floor(diff / (1000 * 60) % 60);
+    const seconds = Math.floor(diff / 1000 % 60);
+
+    let text = "";
+    if (years > 0) text += `${years} 年 `;
+    text += `${days} 天 ${hours} 小时 ${minutes} 分 ${seconds} 秒`;
+    
+    document.getElementById('runtime-text').innerText = text;
+  }
+  // 初始加载立即执行
+  updateRuntime();
+  // 每秒更新一次
+  setInterval(updateRuntime, 1000);
+</script>
+
+<div id="site-runtime" style="font-size:14px;color:#666;padding:8px;border-radius:6px;">
+  📊 今日浏览量: <span id="today-pv">加载中...</span>
+</div>
+<script>
+  const ACCESS_TOKEN = "121.c6116bfc67b9e1d582f7f45f09bd19c6.YGUJmc3MHdS3f_vE0PBUuVIa2ZpzBUQO-5gYkO5.KCrGQw";
+  const SITE_ID = "22337939";
+  function getDateRange() {
+    const today = new Date();
+    const yesterday = new Date(today);
+    yesterday.setDate(today.getDate() - 1);
+    const format = d => d.getFullYear() + 
+      String(d.getMonth() + 1).padStart(2, '0') + 
+      String(d.getDate()).padStart(2, '0');
+    return {
+      start_date: format(yesterday),
+      end_date: format(today)
+    };
+  }
+  // 获取PV数据
+  function fetchPVData() {
+  const { start_date, end_date } = getDateRange(); // 动态获取日期范围
+  const script = document.createElement('script');
+  window.handleBaiduData = function(data) {
+    if (data.result?.items?.[1]?.[1]?.[0]) { // 取今日数据（数组最后一个元素）
+      const todayPV = data.result.items[1][1][0]; 
+      document.getElementById("today-pv").innerText = todayPV;
+    } else {
+      document.getElementById("today-pv").innerText = "数据异常";
+    }
+    script.remove();
+  };
+  script.src = `https://openapi.baidu.com/rest/2.0/tongji/report/getData?
+    access_token=${ACCESS_TOKEN}&
+    site_id=${SITE_ID}&
+    start_date=${start_date}&
+    end_date=${end_date}&
+    metrics=pv_count&
+    method=overview/getTimeTrendRpt&
+    callback=handleBaiduData`.replace(/\s+/g, '');
+  document.body.appendChild(script);
+}
+  // 初始加载 + 每10分钟刷新
+  fetchPVData();
+  setInterval(fetchPVData, 600000);
+</script>
+
+    </div>
+</div><!-- .nexmoe-drawer --></div><div id="nexmoe-content"><div class="nexmoe-primary"><div class="nexmoe-post">
+  <article>
+    
+        <div class="nexmoe-post-cover absolute" style="padding-top: 45.83333333333333%;"> 
+            <img src="/image/banner_7.jpg" alt="【电赛】25电赛电源题（A题）-一次失败的四天三夜比赛寄录" loading="lazy">
+            <h1>【电赛】25电赛电源题（A题）-一次失败的四天三夜比赛寄录</h1>
+        </div>
+    
+    
+    <div class="nexmoe-post-meta">
+    <div class="nexmoe-rainbow">
+        <a class="nexmoefont icon-calendar-fill">2025年08月19日</a>
+        
+            <a class="nexmoefont icon-appstore-fill -link" href="/categories/%E6%9D%82%E8%B0%88/">杂谈</a>
+        
+        
+    <a><i class="nexmoefont icon-areachart"></i>约4.3k字</a>
+    <a><i class="nexmoefont icon-time-circle-fill"></i>预计需要14分钟</a>
+
+    </div>
+    
+    
+    
+    
+    
+</div>
+
+    <h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>本文记录了本人电赛小队队伍情况、赛前准备、赛中进程等内容；我队在本次电赛中斩获了省三等奖的搞笑成绩，但还是决定写下本记录，以供经验总结、警示后世及为未参赛的朋友们提供一点参赛信息。</p>
+<h2 id="背景-赛前准备"><a href="#背景-赛前准备" class="headerlink" title="背景&amp;赛前准备"></a>背景&amp;赛前准备</h2><p>我队小队三人均来自我校RM硬件组队员，掌握基本的电路设计、PCB Layout、STM32嵌入式软件，除我之外两个队友都是大三（本人大二），且他们俩都会一点dsp（虽然后续没实际用上）。由于RM硬件场景基本上只有直流，我们先前项目经验也都是直流，这为我们在越来越注重交流场景的电赛中的搞笑表现埋下伏笔。</p>
+<p>赛前我们参考了许多大佬的开源进行硬件准备，主要包括 <a target="_blank" rel="noopener" href="https://www.edadong.com/">@EDAdong</a> 大佬的一系列采样模块和立创硬件广场上的许多功率电路开源。基本上就是微调原理图+PCB重新Layout+实物验证的工作。后续证明，实物验证确实是一个工作量大并且十分必要的工作。</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/post_25diansai/1.png" alt="image" data-caption="image" loading="lazy"></p>
+<h2 id="元件清单发布"><a href="#元件清单发布" class="headerlink" title="元件清单发布"></a>元件清单发布</h2><p>7月23日，电赛元件清单发布，虽然对交流的东西有心理准备，但是看到清单来个三相可变电阻器，还是略微有点两眼一黑的。</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/post_25diansai/2.png" alt="image" data-caption="image" loading="lazy"></p>
+<p>在此之前我们的准备基本上还没有接触到三相，只有直流的东西和单相逆变，并且单相也只是实现了逆变，没有实现过主动整流。我们三人在电赛前都各自有事情要忙（实习&#x2F;夏令营什么的），或者说没能放足够精力在电赛备赛上吧；总之元件清单出来后我们才加急准备了两套三相全桥逆变及采样等相关板子。剩下的几天，主要做的就是理论学习，把交流这一块的各种不熟悉的控制算法都补一补，没有什么硬件上的工作。</p>
+<h2 id="开赛·第一天"><a href="#开赛·第一天" class="headerlink" title="开赛·第一天"></a>开赛·第一天</h2><p>7月30日早上七点半，赛题发布。今年的A题类似18年E题单相交流电子负载的思路（非常相似），不过升级成了三相；主体上是做一个三相逆变电路（基础部分），有输出额定电压电流、波形失真度（THD）、电压调整率、调频的要求；发挥部分加一个三相整流电路，整流出来的输出回到最开始的直流母线上进行能量回馈，设置系统能量回馈后的直流电源功率（即整个系统的损耗功率）作为发挥部分关键点。分析下来本题不要求什么前沿的电路拓扑，区分度在于实现能量回馈（即整流部分和稳定直流输出）和压缩损耗功率两点。</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/post_25diansai/3.png" alt="image" data-caption="image" loading="lazy"></p>
+<p><a target="_blank" rel="noopener" href="https://nuedc.xidian.edu.cn/html/news/2025/0730/513.html">丢个赛题下载链接在这</a></p>
+<p>我们阅读了赛题确认选择该题（本来就准备的电源题所以也没什么好选的）并进行分析。首先是硬件部分，我们清单发布后准备了两套三相全桥逆变电路（包含驱动、采样等），在正式开赛前板子元件陆续到了，发题的时候已经焊接一半了；因此我们认为硬件上准备已经基本充足，对于三相线上有一些关于需要隔离的讨论，补买了三相共模电感。后续证明这部分决策基本没什么问题，重点在控制算法的实现。另外一个隐藏的难点是今年题目电压相对于往年其实偏高，额定输出线电压有效值32V，换算一下相电压峰值有26V+，因此如果不升压直接使用直流母线电压，需要至少52V电压，我们使用的是电源直出的60V电压，后续了解到其他队伍也基本是这个量级电源；开始还担心测评场地能否提供充足电源和能否使用自带仪器，后续测评那边电源只有30V，但使用自带电源是可以的。</p>
+<p>发挥部分很快就出现两种可行思路：主动整流和被动整流+DCDC。主动整流就是直接反向使用全桥逆变的电路做APFC，同时可以做升压控制，保证输出直流可控；被动整流就是用三相整流桥和滤波输出直流，然后DCDC变换控制直流回馈。我队没有实现过主动整流，评估三相主动整流方案从头实现工作量太大，因此购买了三相整流桥，并计划使用之前准备的BuckBoost板做直流控制。</p>
+<p>确定了大致方案后就开始准备三相逆变部分。当天下午还是晚上，我们实现了基本闭环（没矫正有点飘）的PI电压环控制的三相逆变波形，当时还是比较激动的。但其实这种比较基本常见的需求一般应当在赛前就实现出来备用，这里就体现出我们准备工作量不足了。</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/post_25diansai/4.jpeg" alt="image" data-caption="image" loading="lazy"></p>
+<p>当天晚上差不多一二点就回去休息了。</p>
+<h2 id="第二天"><a href="#第二天" class="headerlink" title="第二天"></a>第二天</h2><p>第二天继续做基础部分的剩余内容，调频和调幅。这两个比较简单，用之前验证过的主控板交互例程改一下即可。</p>
+<blockquote>
+<p>小介绍一下我们的主控方案，使用的是NUCLEO系列的G474的主控系统板，插在一个自制的扩展板上；扩展板包括ADC&#x2F;PWM接口（XH2.54）、交互按键、OLED、LED指示灯、辅助电源接口。图片如下：  这一套用下来挺实用的，小推荐一下。</p>
+</blockquote>
+<p>我们原本在第一天实现了PI控制的逆变之后想尝试做PR控制，但是很尴尬的事情是，我们的板子上是设置了电感电流采样和输出电流采样的，PR控制也需要这些；但是我们在前面跑PI控制的时候就出现端倪了：出现跑着跑着突然噼里啪啦响，有时候没事，有时候出现短路。仔细一查就是电感电流采样芯片坏了，多次出现而我们没有排查出原因，最终只能直接拆除电感电流采样芯片，让纯PI电压环可以正常跑。</p>
+<p>既然控制逻辑没法优化，那么接下去就是优化了下PI控制的参数，优化了点电压调整率的东西。</p>
+<p>做到第二天才差不多把基础部分做完，这个时候其实已经基本看到四天三夜做不完全部题目内容了；但是中途开摆不在我的选择范围内，所以开搞发挥部分。</p>
+<p>首先是测试Boost板子及整流回馈部分使用的电流环，但是这下出问题了；由于未知原因，板子不断出现短路情况，多次烧坏驱动、MOS。该电路之前验证过并没有问题，所以这个时候出bug令我们很奇怪。当晚排查到很晚，一直修，最终比较晚的时候算是修出来一版能跑的电流环Boost；但修一晚上的稳定性还是令人堪忧。但是没办法了，到第三天了。</p>
+<h2 id="第三天"><a href="#第三天" class="headerlink" title="第三天"></a>第三天</h2><p>第三天，整流桥等快递基本都到齐了，我们开搭发挥部分电路。三相逆变出来之后过三相共模电感，然后接整流桥、滤波、Boost模块和电阻。发现就算中间不上Boost模块，直接滤波后接电阻，逆变波形也出现了类似马鞍波的失真，推测是使用被动整流，电流畸变+逆变闭环控制不力导致的；从而会影响到电压值，并且直流电源数值也容易波动。但是我们先不管那么多，继续测上Boost的能量回馈。</p>
+<p>结果当然是不尽人意，滤波整流后一上大负载就电源失控、波形变形，Boost电流环因为前级不稳定因素也没有正常跑通过，研究一整天也没有得出结果。到第三天夜里我们决定停止对于发挥部分的挣扎，通过调整LC滤波电容电感值、调整PI参数等方式，以此最后再微调一下基础部分THD、电压调整率的表现。</p>
+<h2 id="第四天"><a href="#第四天" class="headerlink" title="第四天"></a>第四天</h2><p>对于发挥部分的尝试持续到第三天的后半夜（或者说第四天的凌晨半夜），简单休息一下我们就继续最后一个白天的日程，完善下上面说的基础部分东西了。此时心情是很复杂的，电赛打到第二年了而且今年是国赛，赛前的技术准备虽说还是永远不够，但在赛前已经是尽量挤时间做了（学期内还有RM备赛占据大量时间，RM25赛事结束后还承担管理任务）；到现在基础部分都做完了卡在发挥部分一点做不出来还是挺难受的。</p>
+<p>但是客观事实不因主观思想而改变，我们最后能做的也就完善和保卫下我们已有的成果。我在第四天写了报告，队友测试的电感电容参数和辅助电源等保证每一模块都至少有两套可用。然后到了下午就是打印报告、签字、封箱了；当天晚上八点封箱完，可能今年是国赛比较严格，需要我们当晚就有一人大巴陪同作品，去到西安邮电大学存放作品了。当晚快十二点才回到学校。</p>
+<blockquote>
+<p>辅助电源这块我想插一嘴，今年60V左右的直流输入电压，对于辅助电源的输入耐受电压其实是有挑战性的，我们赛前准备的模块并没有到这个范围，紧急买了现成的降压模块补充的。</p>
+</blockquote>
+<p>存放作品的流程比较简单，就是老师交档案-确认队伍编号进去存放-出来回家的事情。</p>
+<h2 id="测评"><a href="#测评" class="headerlink" title="测评"></a>测评</h2><p>封箱送完作品就是等待测评和测评了。今年是2号完赛，4-6号进行测评。不管做的怎么样，封完箱没什么再好做的了，心里上轻松了许多；和许多队伍一样，完赛第二天我们三人都处于沉睡状态。我们安排到5号下午测评。</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/post_25diansai/6.png" alt="image" data-caption="image" loading="lazy"></p>
+<p>测评流程（具体流程看具体主办方会有差异）：在教室领号叫号-领取作品-到测评场地测评-送回作品。</p>
+<p>具体测评过程：进去签字到测试桌前（是有多个队伍同时测试的），那边给了定时十五分钟，自己开箱接线，可以熟悉场地设备（万用表、电源等，并未提供示波器，功率分析仪可能数量原因是测评老师手里一台带着），该时间段内自己测试完成可以提前叫老师开始测评。一位老师手持测试记录表（如下图，图源为比赛之后网络流传，非本人拍摄，侵删）进行测试数据的记录，另一位老师拿功率测试仪进行数据测量。测评过程中按照老师的指示依次测量每一项数据，数据读取和记录由老师负责即可。</p>
+<p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/post_25diansai/5.jpg" alt="image" data-caption="image" loading="lazy"></p>
+<p>我们队在测评过程中没有翻车，测评效果都还行，基础部分只有电压调整率没有完全达标，基础50分自我估分应该有45+。评测完感觉还行，甚至以为有机会省二省一（）。</p>
+<h2 id="赛后总结"><a href="#赛后总结" class="headerlink" title="赛后总结"></a>赛后总结</h2><h3 id="根因分析"><a href="#根因分析" class="headerlink" title="根因分析"></a>根因分析</h3><p>首先还是分析下我们失败的原因吧；<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/1930925755644223747">单次的成功或失败，不过是你的数据点而已 </a>。</p>
+<h4 id="工作准备（技术）"><a href="#工作准备（技术）" class="headerlink" title="工作准备（技术）"></a>工作准备（技术）</h4><p>电赛电源题的特点是：题目可以分为DCDC、ACDC等几种大类型，对于每种大类型都需要提前准备并实现其功能（如DCDC的电压环、电流环升降压闭环控制；DCAC单相逆变；ACDC的PFC控制等），在真正比赛的时候即拿即用，才能称得上有一战之力，有精力去推进电赛的创新部分。而正如上面所说的，我们在比赛开始的时候，对于模块的实现进度太低了，就连提前准备了的Buck-Boost也在使用过程中出现bug；因此我认为赛前工作量不足是我们失败的直接原因。</p>
+<p>在赛前准备过程中有技术路线问题，例如采用谁家开源、先准备什么模块什么的；我认为这不是重大问题，只是影响赛前需要准备的工作量多少而已，对于赛前工作准备的根本问题还是队员能抽出来多少精力和技术储备。</p>
+<p>我队的技术经验基本都是RM训练的，我校的电赛培养、电子设计培养都约等于零；我队三人都是在RM队伍体系中参与至少一年的硬件组成员，做的东西都是车上用的直流变换以及超级电容相关的，但也是培养了基本的电路能力；不知道是电赛题目设计距离实际应用场景有gap，还是RM硬件比较偏科，总之如果不是为了备赛电赛，我们其实并不怎么接触到交流的东西。所以这是我们技术上的一个缺陷。在电赛过程中，处理逆变控制的时候，对于环路控制、PR控制等比较深的控制技术也感到比较缺乏。</p>
+<h4 id="团队协作（人员）"><a href="#团队协作（人员）" class="headerlink" title="团队协作（人员）"></a>团队协作（人员）</h4><p>决定一个时期是否成功的决定因素还是人。人员因素分为备赛人力资源和团队氛围两部分考虑。我们在团队氛围做的比较好，因为都是一起打过RM的队友，共同工作时间长，并且都比较熟悉<del>并且都是打RM的还能熬</del>，另外我们技术栈也都比较全，每个人单拎出来都是可以做软件也可以做硬件；因此在电赛过程中我们配合紧密，各种工作可以相互交接，也就可以合适安排休息，时间利用率还是比较高的。</p>
+<p>但另一方面的人力资源就是我们的一个缺点。我队一人在市内实习，一人在忙夏令营，一人在忙RM的管理；导致我们在学期内基本没什么时间实际进行电赛准备，在暑假留校的一个月左右才真正大量进行备赛准备；这也就直接导致了上面的工作准备问题的缺乏。</p>
+<h4 id="培养氛围（环境）"><a href="#培养氛围（环境）" class="headerlink" title="培养氛围（环境）"></a>培养氛围（环境）</h4><p>我校完全没有成体系的电赛培训。部分指导老师可能会提供一些相关建议，但电赛备赛完全靠自学，学校的电赛成绩也不是很好。所以我的电赛学习环境其实就只能靠RM学硬件的底子；环境因素也是构成技术缺陷的一个背后原因。</p>
+<h3 id="Next-Time"><a href="#Next-Time" class="headerlink" title="Next Time"></a>Next Time</h3><p>告别了2025年电赛，有遗憾也有收获。总结自己大二一年的项目经验的话，其实会发现并没有很多进步；倒是电赛这几天实践经验增长的快一些。</p>
+<p>明年不知道会不会再打一轮电赛了，但是如果有机会打的话应该还是会参与。电赛虽然只有技术，但从技术上来说确实是个不错的锻炼机会。它涉及的技术其实并不很深入，但是需要有充足的测试和稳定性。如果再一次搞电赛的话，我希望自己和队伍能做到以下几点（算是一个checklist）：</p>
+<ul>
+<li>技术<ul>
+<li>至少三个月的准备时间，这里的要求是日均备赛工作时长至少2小时</li>
+<li>赛前能有真正能稳定运行的各种电路拓扑模块（DCDC、ACDC、DCAC、辅助电源、主控），且具有调整空间</li>
+</ul>
+</li>
+<li>人员<ul>
+<li>队友有合作经验（可以通过校赛、校际联赛等训练），明确自身岗位、分工（如果不软硬件兼修的话），靠谱不摸鱼跑路</li>
+</ul>
+</li>
+<li>环境<ul>
+<li>大环境难以改变，或许在队内或者同题型队伍之间可以有相互交流学习甚至学习小组的关系？</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<center>
+
+<p>北海虽赊，扶摇可接；<br>东隅已逝，桑榆非晚。</p>
+</center>
+</blockquote>
+<hr>
+<p><strong>写于</strong> 25.08.19</p>
+
+    
+  </article>
+
+  
+      
+
+  
+  
+  <div class="nexmoe-post-meta nexmoe-rainbow">
+   
+    
+        <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E6%97%A5%E5%BF%97/" rel="tag">日志</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E7%94%B5%E8%B5%9B/" rel="tag">电赛</a> <a class="nexmoefont icon-tag-fill -none-link" href="/tags/%E7%A1%AC%E4%BB%B6/" rel="tag">硬件</a>
+    
+</div>
+  
+  
+    <script async src="/js/copy-codeblock.js?v=1755604005081"></script>
+  
+
+  
+      <div class="nexmoe-post-footer">
+          
+      </div>
+  
+</div></div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
+        <div class="nexmoe-tool">
+
+            
+
+            
+            
+            <button class="mdui-fab catalog" style="overflow:unset;">
+                <i class="nexmoefont icon-i-catalog"></i>
+                <div class="nexmoe-toc">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E4%BB%8B"><span class="toc-number">1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%83%8C%E6%99%AF-%E8%B5%9B%E5%89%8D%E5%87%86%E5%A4%87"><span class="toc-number">2.</span> <span class="toc-text">背景&amp;赛前准备</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%83%E4%BB%B6%E6%B8%85%E5%8D%95%E5%8F%91%E5%B8%83"><span class="toc-number">3.</span> <span class="toc-text">元件清单发布</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%BC%80%E8%B5%9B%C2%B7%E7%AC%AC%E4%B8%80%E5%A4%A9"><span class="toc-number">4.</span> <span class="toc-text">开赛·第一天</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E5%A4%A9"><span class="toc-number">5.</span> <span class="toc-text">第二天</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%89%E5%A4%A9"><span class="toc-number">6.</span> <span class="toc-text">第三天</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E5%9B%9B%E5%A4%A9"><span class="toc-number">7.</span> <span class="toc-text">第四天</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B5%8B%E8%AF%84"><span class="toc-number">8.</span> <span class="toc-text">测评</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%B5%9B%E5%90%8E%E6%80%BB%E7%BB%93"><span class="toc-number">9.</span> <span class="toc-text">赛后总结</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%A0%B9%E5%9B%A0%E5%88%86%E6%9E%90"><span class="toc-number">9.1.</span> <span class="toc-text">根因分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%B7%A5%E4%BD%9C%E5%87%86%E5%A4%87%EF%BC%88%E6%8A%80%E6%9C%AF%EF%BC%89"><span class="toc-number">9.1.1.</span> <span class="toc-text">工作准备（技术）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%A2%E9%98%9F%E5%8D%8F%E4%BD%9C%EF%BC%88%E4%BA%BA%E5%91%98%EF%BC%89"><span class="toc-number">9.1.2.</span> <span class="toc-text">团队协作（人员）</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9F%B9%E5%85%BB%E6%B0%9B%E5%9B%B4%EF%BC%88%E7%8E%AF%E5%A2%83%EF%BC%89"><span class="toc-number">9.1.3.</span> <span class="toc-text">培养氛围（环境）</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Next-Time"><span class="toc-number">9.2.</span> <span class="toc-text">Next Time</span></a></li></ol></li></ol>
+                </div>
+            </button>
+            
+
+            
+
+            <a href="#nexmoe-content" class="backtop toc-link" aria-label="Back To Top" title="top"><button class="mdui-fab mdui-ripple"><i class="nexmoefont icon-caret-top"></i></button></a>
+        </div>
+    </div>
+</div></div><div id="nexmoe-footer"><!--!--></div><div id="nexmoe-search-space"><div class="search-container"><div class="search-header"><div class="search-input-container"><input class="search-input" type="text" placeholder="搜索" onInput="sinput();"></div><a class="search-close" onclick="sclose();">×</a></div><div class="search-body"></div></div></div><div><script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2058306854838448" crossorigin="anonymous"></script>
+</div></body></html>
