@@ -27,15 +27,15 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1758219019389">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1758353989051">
 
-<link rel="stylesheet" href="/css/style.css?v=1758219019389">
+<link rel="stylesheet" href="/css/style.css?v=1758353989051">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1758219019389">
+        <link rel="stylesheet" href="/custom.css?v=1758353989051">
     
 
 
@@ -45,7 +45,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1758219019389"></script>
+<script async src="/js/app.js?v=1758353989051"></script>
 
  
 
@@ -114,7 +114,7 @@ var _hmt = _hmt || [];
 </div>
 
 
-	<script async src="/js/search.js?v=1758219019389"></script>
+	<script async src="/js/search.js?v=1758353989051"></script>
 
 
 
@@ -276,6 +276,25 @@ var _hmt = _hmt || [];
     
         
         
+        
+        <div class="widget-friends">
+  <div class="widget-title">友情链接</div>
+  <ul class="friends-list">
+    
+      
+      <li class="friend-item">
+        <a href="https://blog.bi7khi.xyz/" class="friend-link" target="_blank" rel="noopener">
+          <img src="/image/link/avatar_bi7khi.png" class="friend-avatar" alt="BI7KHI的小破站">
+          <div class="friend-info">
+            <span class="friend-name">BI7KHI的小破站</span>
+            <span class="friend-desc">blog.bi7khi.xyz/</span>
+          </div>
+        </a>
+      </li>
+    
+  </ul>
+</div>
+    
    
     <div class="nexmoe-copyright">
         &copy; 2025 HongLiu
@@ -306,52 +325,6 @@ var _hmt = _hmt || [];
   updateRuntime();
   // 每秒更新一次
   setInterval(updateRuntime, 1000);
-</script>
-
-<div id="site-runtime" style="font-size:14px;color:#666;padding:8px;border-radius:6px;">
-  📊 今日浏览量: <span id="today-pv">加载中...</span>
-</div>
-<script>
-  const ACCESS_TOKEN = "121.c6116bfc67b9e1d582f7f45f09bd19c6.YGUJmc3MHdS3f_vE0PBUuVIa2ZpzBUQO-5gYkO5.KCrGQw";
-  const SITE_ID = "22337939";
-  function getDateRange() {
-    const today = new Date();
-    const yesterday = new Date(today);
-    yesterday.setDate(today.getDate() - 1);
-    const format = d => d.getFullYear() + 
-      String(d.getMonth() + 1).padStart(2, '0') + 
-      String(d.getDate()).padStart(2, '0');
-    return {
-      start_date: format(yesterday),
-      end_date: format(today)
-    };
-  }
-  // 获取PV数据
-  function fetchPVData() {
-  const { start_date, end_date } = getDateRange(); // 动态获取日期范围
-  const script = document.createElement('script');
-  window.handleBaiduData = function(data) {
-    if (data.result?.items?.[1]?.[1]?.[0]) { // 取今日数据（数组最后一个元素）
-      const todayPV = data.result.items[1][1][0]; 
-      document.getElementById("today-pv").innerText = todayPV;
-    } else {
-      document.getElementById("today-pv").innerText = "数据异常";
-    }
-    script.remove();
-  };
-  script.src = `https://openapi.baidu.com/rest/2.0/tongji/report/getData?
-    access_token=${ACCESS_TOKEN}&
-    site_id=${SITE_ID}&
-    start_date=${start_date}&
-    end_date=${end_date}&
-    metrics=pv_count&
-    method=overview/getTimeTrendRpt&
-    callback=handleBaiduData`.replace(/\s+/g, '');
-  document.body.appendChild(script);
-}
-  // 初始加载 + 每10分钟刷新
-  fetchPVData();
-  setInterval(fetchPVData, 600000);
 </script>
 
     </div>
@@ -414,7 +387,7 @@ var _hmt = _hmt || [];
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1758219019335"></script>
+    <script async src="/js/copy-codeblock.js?v=1758353988999"></script>
   
 
   
