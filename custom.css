@@ -6,25 +6,23 @@
   /* 其他变量保持默认，无需重复声明 */
 }
 
-
-
 /* 友情链接样式 */
 .widget-friends {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .widget-friends .widget-title {
-    font-size: 1.1em;
-    font-weight: bold;
+    font-size: 1.0em;
+    font-weight: medium;
     margin-bottom: 15px;
-    color: var(--text-color);
+    color: #98e14f;
     border-bottom: 2px solid var(--primary-cyan);
     padding-bottom: 5px;
 }
 
 .friends-list {
     list-style: none;
-    padding: 0;
+    padding: 0 0 12px 0;
     margin: 0;
 }
 
@@ -32,12 +30,14 @@
     margin-bottom: 12px;
     padding: 8px;
     border-radius: 8px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
 }
 
-.friend-item:hover {
-    background-color: rgba(13, 199, 124, 0.1);
-    transform: translateX(5px);
+/* 移除最下方容器的底部间距 */
+.friend-item:last-child {
+    margin-bottom: 0;
 }
 
 .friend-link {
@@ -45,6 +45,7 @@
     align-items: center;
     text-decoration: none;
     color: inherit;
+    width: 100%;
 }
 
 .friend-link:hover {
@@ -59,12 +60,7 @@
     margin-right: 12px;
     object-fit: cover;
     border: 2px solid var(--primary-cyan);
-    transition: border-color 0.3s ease;
     flex-shrink: 0;
-}
-
-.friend-item:hover .friend-avatar {
-    border-color: var(--accent-color);
 }
 
 .friend-info {
@@ -76,7 +72,7 @@
 }
 
 .friend-name {
-    font-weight: medium;
+    font-weight: bold;
     color: var(--text-color);
     text-decoration: none;
     display: block;
@@ -85,17 +81,30 @@
     line-height: 1.2;
 }
 
-.friend-link:hover .friend-name {
-    color: var(--primary-cyan);
-    text-decoration: none;
-}
-
 .friend-desc {
     font-size: 0.85em;
     color: var(--text-muted);
     line-height: 1.3;
     word-wrap: break-word;
     overflow-wrap: break-word;
+}
+
+
+/* 确保所有图标都使用相同的基线 */
+.nexmoe-social a i,
+.nexmoe-social a [class*="icon-"] {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.nexmoe-social a:hover {
+    background-color: var(--color-primary) !important;
+    color: white !important;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(34, 217, 223, 0.3);
 }
 
 /* 响应式优化 */
@@ -121,4 +130,55 @@
     .friend-name {
         font-size: 0.9em;
     }
+}
+
+/* MathJax 数学公式样式 */
+.MathJax {
+    outline: 0;
+}
+
+.MathJax_Display {
+    text-align: center !important;
+    margin: 1em 0 !important;
+}
+
+.MathJax_SVG_Display {
+    text-align: center !important;
+    margin: 1em 0 !important;
+}
+
+/* 行内公式样式 */
+.MathJax_SVG {
+    display: inline !important;
+    vertical-align: middle !important;
+}
+
+/* 块级公式样式 */
+.MathJax_Display .MathJax_SVG {
+    display: block !important;
+    text-align: center !important;
+}
+
+/* 确保数学公式在暗色主题下可见 */
+.MathJax_SVG * {
+    color: inherit !important;
+}
+
+/* 数学公式容器样式 */
+.math {
+    text-align: center;
+    margin: 1.2em 0;
+}
+
+/* 行内数学公式 */
+.math.inline {
+    display: inline;
+    margin: 0;
+}
+
+/* 块级数学公式 */
+.math.display {
+    display: block;
+    text-align: center;
+    margin: 1.2em 0;
 }
