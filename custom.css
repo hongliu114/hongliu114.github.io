@@ -182,3 +182,36 @@
     text-align: center;
     margin: 1.2em 0;
 }
+
+/* Ensure Font Awesome icons render even if theme forces `nexmoefont` */
+/* Solid icons */
+.nexmoefont.fa-solid,
+.nexmoefont.fas,
+.nexmoefont.fa-solid:before,
+.nexmoefont.fas:before {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 900 !important;
+}
+
+/* Regular icons */
+.nexmoefont.fa-regular,
+.nexmoefont.far,
+.nexmoefont.fa-regular:before,
+.nexmoefont.far:before {
+    font-family: "Font Awesome 6 Free" !important;
+    font-weight: 400 !important;
+}
+
+/* Brand icons */
+.nexmoefont.fa-brands,
+.nexmoefont.fab,
+.nexmoefont.fa-brands:before,
+.nexmoefont.fab:before {
+    font-family: "Font Awesome 6 Brands" !important;
+    font-weight: 400 !important;
+}
+
+/* Fallback: if an element has any fa-* class, prefer Font Awesome fonts */
+.nexmoefont[class*="fa-"] {
+    font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", sans-serif !important;
+}
