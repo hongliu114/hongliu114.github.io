@@ -27,17 +27,17 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1768373906967">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1768375266462">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<link rel="stylesheet" href="/css/style.css?v=1768373906967">
+<link rel="stylesheet" href="/css/style.css?v=1768375266462">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1768373906967">
+        <link rel="stylesheet" href="/custom.css?v=1768375266462">
     
 
 
@@ -47,7 +47,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1768373906968"></script>
+<script async src="/js/app.js?v=1768375266462"></script>
 
  
 
@@ -134,7 +134,7 @@ var _hmt = _hmt || [];
 </div>
 
 
-	<script async src="/js/search.js?v=1768373906968"></script>
+	<script async src="/js/search.js?v=1768375266463"></script>
 
 
 
@@ -396,7 +396,7 @@ var _hmt = _hmt || [];
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1768373906811"></script>
+    <script async src="/js/copy-codeblock.js?v=1768375266254"></script>
   
 
   
@@ -414,43 +414,53 @@ var _hmt = _hmt || [];
 <script>
   // 动态注入 Twikoo 脚本并添加错误回退
   (function(){
-    var script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/twikoo@1.9.0/dist/twikoo.all.min.js';
-    script.async = true;
-    script.onerror = function(){
+    function tryLoad(src, onload, onerror){
+      var s = document.createElement('script');
+      s.src = src;
+      s.async = true;
+      s.onload = onload;
+      s.onerror = onerror;
+      (document.head || document.body).appendChild(s);
+    }
+
+    function showError(){
       var err = document.querySelector('#twikoo .twikoo-error');
       var load = document.querySelector('#twikoo .twikoo-loading');
       if(load) load.style.display = 'none';
       if(err) err.style.display = 'block';
-    };
-    script.onload = function(){
+    }
+
+    function initTwikoo(){
       try{
         var env = 'https://twikoo-hongliuicu.vercel.app';
+        if(!twikoo || typeof twikoo.init !== 'function'){
+          showError();
+          return;
+        }
         twikoo.init({
           envId: env,
           el: '#twikoo',
           path: location.pathname,
           visitor: false
         });
-        // 5s 超时检测：如果没有内容则显示错误提示
         setTimeout(function(){
           var container = document.getElementById('twikoo');
           var load = container.querySelector('.twikoo-loading');
           if(load) load.style.display = 'none';
-          // 检查是否被 Twikoo 渲染（简单判断子元素数量）
           if(container && container.children.length <= 1){
-            var err = container.querySelector('.twikoo-error');
-            if(err) err.style.display = 'block';
+            showError();
           }
         }, 5000);
       }catch(e){
-        var err = document.querySelector('#twikoo .twikoo-error');
-        var load = document.querySelector('#twikoo .twikoo-loading');
-        if(load) load.style.display = 'none';
-        if(err) err.style.display = 'block';
+        showError();
       }
-    };
-    (document.head || document.body).appendChild(script);
+    }
+
+    // 先尝试加载站点同源文件，减少被追踪阻止的概率；若失败再回退到 CDN
+    tryLoad('/js/twikoo.all.min.js', initTwikoo, function(){
+      // fallback to CDN (may still be blocked by tracking prevention)
+      tryLoad('https://cdn.staticfile.org/twikoo/1.6.26/twikoo.all.min.js', initTwikoo, showError);
+    });
   })();
 </script>
 

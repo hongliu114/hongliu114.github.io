@@ -22,17 +22,17 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1768373906901">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1768375266401">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<link rel="stylesheet" href="/css/style.css?v=1768373906901">
+<link rel="stylesheet" href="/css/style.css?v=1768375266401">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1768373906901">
+        <link rel="stylesheet" href="/custom.css?v=1768375266401">
     
 
 
@@ -42,7 +42,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1768373906901"></script>
+<script async src="/js/app.js?v=1768375266402"></script>
 
  
 
@@ -129,7 +129,7 @@ var _hmt = _hmt || [];
 </div>
 
 
-	<script async src="/js/search.js?v=1768373906902"></script>
+	<script async src="/js/search.js?v=1768375266402"></script>
 
 
 
@@ -379,7 +379,7 @@ var _hmt = _hmt || [];
 <p>媒体技能：平面设计&amp;摄影&amp;视频制作，时不时搓点周边&#x2F;海报等小玩意。</p>
 <p>前化学实验党&amp;化竞党&amp;晶体制作党，已淡坑。</p>
 <h3 id="生活栈"><a href="#生活栈" class="headerlink" title="生活栈"></a>生活栈</h3><p>明日方舟、文明六、百合&#x2F;轻百番、日常番、音游（淡坑）。</p>
-<h3 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h3><p>你可以通过该网站导航栏（电脑端页面左侧&#x2F;手机端左上角打开）的social链接联系到我。或使用QQ邮箱<a href="mailto:&#50;&#49;&#x32;&#x30;&#x36;&#x39;&#48;&#x30;&#56;&#53;&#x40;&#x71;&#x71;&#46;&#99;&#111;&#x6d;">&#50;&#49;&#x32;&#x30;&#x36;&#x39;&#48;&#x30;&#56;&#53;&#x40;&#x71;&#x71;&#46;&#99;&#111;&#x6d;</a>.</p>
+<h3 id="联系方式"><a href="#联系方式" class="headerlink" title="联系方式"></a>联系方式</h3><p>你可以通过该网站导航栏（电脑端页面左侧&#x2F;手机端左上角打开）的social链接联系到我。或使用QQ邮箱<a href="mailto:&#50;&#49;&#50;&#48;&#x36;&#x39;&#x30;&#x30;&#56;&#53;&#64;&#x71;&#113;&#x2e;&#99;&#x6f;&#x6d;">&#50;&#49;&#50;&#48;&#x36;&#x39;&#x30;&#x30;&#56;&#53;&#64;&#x71;&#113;&#x2e;&#99;&#x6f;&#x6d;</a>.</p>
 <h2 id="网站相关"><a href="#网站相关" class="headerlink" title="网站相关"></a>网站相关</h2><p><strong>建站时间</strong>：2025.08</p>
 <p><strong>主要内容</strong>：</p>
 <ul>
@@ -429,7 +429,7 @@ var _hmt = _hmt || [];
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1768373906785"></script>
+    <script async src="/js/copy-codeblock.js?v=1768375266234"></script>
   
 
   
@@ -447,43 +447,53 @@ var _hmt = _hmt || [];
 <script>
   // 动态注入 Twikoo 脚本并添加错误回退
   (function(){
-    var script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/twikoo@1.9.0/dist/twikoo.all.min.js';
-    script.async = true;
-    script.onerror = function(){
+    function tryLoad(src, onload, onerror){
+      var s = document.createElement('script');
+      s.src = src;
+      s.async = true;
+      s.onload = onload;
+      s.onerror = onerror;
+      (document.head || document.body).appendChild(s);
+    }
+
+    function showError(){
       var err = document.querySelector('#twikoo .twikoo-error');
       var load = document.querySelector('#twikoo .twikoo-loading');
       if(load) load.style.display = 'none';
       if(err) err.style.display = 'block';
-    };
-    script.onload = function(){
+    }
+
+    function initTwikoo(){
       try{
         var env = 'https://twikoo-hongliuicu.vercel.app';
+        if(!twikoo || typeof twikoo.init !== 'function'){
+          showError();
+          return;
+        }
         twikoo.init({
           envId: env,
           el: '#twikoo',
           path: location.pathname,
           visitor: false
         });
-        // 5s 超时检测：如果没有内容则显示错误提示
         setTimeout(function(){
           var container = document.getElementById('twikoo');
           var load = container.querySelector('.twikoo-loading');
           if(load) load.style.display = 'none';
-          // 检查是否被 Twikoo 渲染（简单判断子元素数量）
           if(container && container.children.length <= 1){
-            var err = container.querySelector('.twikoo-error');
-            if(err) err.style.display = 'block';
+            showError();
           }
         }, 5000);
       }catch(e){
-        var err = document.querySelector('#twikoo .twikoo-error');
-        var load = document.querySelector('#twikoo .twikoo-loading');
-        if(load) load.style.display = 'none';
-        if(err) err.style.display = 'block';
+        showError();
       }
-    };
-    (document.head || document.body).appendChild(script);
+    }
+
+    // 先尝试加载站点同源文件，减少被追踪阻止的概率；若失败再回退到 CDN
+    tryLoad('/js/twikoo.all.min.js', initTwikoo, function(){
+      // fallback to CDN (may still be blocked by tracking prevention)
+      tryLoad('https://cdn.staticfile.org/twikoo/1.6.26/twikoo.all.min.js', initTwikoo, showError);
+    });
   })();
 </script>
 
