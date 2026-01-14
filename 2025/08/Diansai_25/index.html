@@ -32,17 +32,17 @@
 <link rel="stylesheet" href="/lib/mdui_043tiny/mdui.css">
 
 
-<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1767884648884">
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css?v=1768373906964">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-<link rel="stylesheet" href="/css/style.css?v=1767884648884">
+<link rel="stylesheet" href="/css/style.css?v=1768373906964">
 
 
 
 
     
-        <link rel="stylesheet" href="/custom.css?v=1767884648884">
+        <link rel="stylesheet" href="/custom.css?v=1768373906964">
     
 
 
@@ -52,7 +52,7 @@
 <script src="/lib/lax.min.js" async></script>
 
 
-<script async src="/js/app.js?v=1767884648884"></script>
+<script async src="/js/app.js?v=1768373906965"></script>
 
  
 
@@ -139,7 +139,7 @@ var _hmt = _hmt || [];
 </div>
 
 
-	<script async src="/js/search.js?v=1767884648884"></script>
+	<script async src="/js/search.js?v=1768373906965"></script>
 
 
 
@@ -456,12 +456,64 @@ var _hmt = _hmt || [];
 </div>
   
   
-    <script async src="/js/copy-codeblock.js?v=1767884648761"></script>
+    <script async src="/js/copy-codeblock.js?v=1768373906810"></script>
   
 
   
       <div class="nexmoe-post-footer">
-          
+          <div id="comment-card" class="comment-card">
+  <div class="main-title-bar">
+    <div class="main-title-dot"></div>
+    <div class="main-title">评论</div>
+  </div>
+  <div id="twikoo" class="twikoo-container">
+    <div class="twikoo-loading">评论加载中…</div>
+    <div class="twikoo-error" style="display:none;color:#999;margin-top:8px;">评论加载失败，若持续失败请联系站长或稍后重试。</div>
+  </div>
+</div>
+<script>
+  // 动态注入 Twikoo 脚本并添加错误回退
+  (function(){
+    var script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/twikoo@1.9.0/dist/twikoo.all.min.js';
+    script.async = true;
+    script.onerror = function(){
+      var err = document.querySelector('#twikoo .twikoo-error');
+      var load = document.querySelector('#twikoo .twikoo-loading');
+      if(load) load.style.display = 'none';
+      if(err) err.style.display = 'block';
+    };
+    script.onload = function(){
+      try{
+        var env = 'https://twikoo-hongliuicu.vercel.app';
+        twikoo.init({
+          envId: env,
+          el: '#twikoo',
+          path: location.pathname,
+          visitor: false
+        });
+        // 5s 超时检测：如果没有内容则显示错误提示
+        setTimeout(function(){
+          var container = document.getElementById('twikoo');
+          var load = container.querySelector('.twikoo-loading');
+          if(load) load.style.display = 'none';
+          // 检查是否被 Twikoo 渲染（简单判断子元素数量）
+          if(container && container.children.length <= 1){
+            var err = container.querySelector('.twikoo-error');
+            if(err) err.style.display = 'block';
+          }
+        }, 5000);
+      }catch(e){
+        var err = document.querySelector('#twikoo .twikoo-error');
+        var load = document.querySelector('#twikoo .twikoo-loading');
+        if(load) load.style.display = 'none';
+        if(err) err.style.display = 'block';
+      }
+    };
+    (document.head || document.body).appendChild(script);
+  })();
+</script>
+
       </div>
   
 </div></div><div class="nexmoe-post-right">    <div class="nexmoe-fixed">
