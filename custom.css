@@ -6,6 +6,8 @@
   /* 其他变量保持默认，无需重复声明 */
 }
 
+
+
 /* 友情链接样式 */
 .widget-friends {
     margin-bottom: 20px;
@@ -214,4 +216,42 @@
 /* Fallback: if an element has any fa-* class, prefer Font Awesome fonts */
 .nexmoefont[class*="fa-"] {
     font-family: "Font Awesome 6 Free", "Font Awesome 6 Brands", sans-serif !important;
+}
+
+/* === 高亮色自定义（新增） ===
+     定义新的高亮色变量，替换页面选择/mark/搜索关键词等的默认主题高亮。
+     修改下面的颜色值即可达到你想要的高亮色。 */
+:root {
+    --color-highlight: #ffd54f; /* 高亮背景色（用于 <mark> 等） */
+    --color-highlight-text: #386c05; /* 高亮文字颜色 */
+    --color-highlight-bg: rgba(69, 78, 20, 0.351); /* 选择（selection）使用的半透明背景 */
+}
+
+/* 文本选择（用户拖选文本时的高亮） */
+::selection { background: var(--color-highlight-bg); color: var(--color-highlight-text); }
+::-moz-selection { background: var(--color-highlight-bg); color: var(--color-highlight-text); }
+
+/* 标记和搜索关键词高亮 */
+mark,
+.mdui-typo mark,
+mark.search-keyword {
+    background: var(--color-highlight);
+    color: var(--color-highlight-text);
+    padding: 0.08em 0.2em;
+    border-radius: 3px;
+}
+
+/* 代码块/行内代码选择时也使用相同的选择背景 */
+pre[class*="language-"]::selection,
+pre[class*="language-"] ::selection,
+code[class*="language-"]::selection,
+code[class*="language-"] ::selection {
+    background: var(--color-highlight-bg);
+}
+
+/* 如果主题在某些地方强制使用 --color-primary 作为高亮，可用更高优先级的选择器覆盖 */
+.post-content a.highlighted, /* 假设类名为 highlighted，仅示例 */
+.post-content .search-highlight {
+    background: var(--color-highlight) !important;
+    color: var(--color-highlight-text) !important;
 }
