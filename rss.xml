@@ -6,7 +6,7 @@
   <link href="https://hongliu.icu/rss.xml" rel="self"/>
   
   <link href="https://hongliu.icu/"/>
-  <updated>2026-01-14T09:00:58.336Z</updated>
+  <updated>2026-02-01T16:57:09.808Z</updated>
   <id>https://hongliu.icu/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>【知识笔记】自动控制原理</title>
+    <link href="https://hongliu.icu/2026/02/Note-zikong/"/>
+    <id>https://hongliu.icu/2026/02/Note-zikong/</id>
+    <published>2026-02-01T16:43:45.000Z</published>
+    <updated>2026-02-01T16:57:09.808Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>内容：自动控制原理</p><p>使用课本：《自动控制理论》；ISBN 978-7-111-39697-0</p><p>学习途径：课内</p><p>由于本网站主题不支持Latex且我使用的笔记软件Obsidian，笔记在网站中图片、公式等部分显示异常，故提供md笔记的网盘链接和PDF导出文件可供下载。</p><p>​<a href="https://pan.baidu.com/s/1TwiVaWRcNSUOLGNmdzAhJA?pwd=3508">md笔记百度网盘链接|密码3508</a></p><p>​<a href="/pdf/%E8%87%AA%E6%8E%A7_%E6%80%BB%E7%AC%94%E8%AE%B0.pdf">自控_总笔记</a></p><p><em>md笔记建议使用Obsidian查阅，附件存放路径设置为“当前文件所在文件夹下指定的子文件夹”，子文件夹名称为assets</em></p></blockquote><p>下面提供部分笔记预览。</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Note-zikong/1.png" alt="image" data-caption="image" loading="lazy"></p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Note-zikong/2.png" alt="image" data-caption="image" loading="lazy"></p><hr>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;内容：自动控制原理&lt;/p&gt;
+&lt;p&gt;使用课本：《自动控制理论》；ISBN 978-7-111-39697-0&lt;/p&gt;
+&lt;p&gt;学习途径：课内&lt;/p&gt;
+&lt;p&gt;由于本网站主题不支持Latex且我使用的笔记软件Obsidian，笔记在网站中图片、公式等部分显</summary>
+      
+    
+    
+    
+    <category term="知识笔记" scheme="https://hongliu.icu/categories/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="笔记" scheme="https://hongliu.icu/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+    <category term="控制" scheme="https://hongliu.icu/tags/%E6%8E%A7%E5%88%B6/"/>
+    
+  </entry>
   
   <entry>
     <title>【知识笔记】传感器与检测技术</title>
@@ -130,10 +160,10 @@
     <title>【HAM】业余无线电入坑实录</title>
     <link href="https://hongliu.icu/2025/11/Daily-HAM/"/>
     <id>https://hongliu.icu/2025/11/Daily-HAM/</id>
-    <published>2025-11-13T14:36:12.000Z</published>
-    <updated>2025-12-05T10:53:30.885Z</updated>
+    <published>2025-11-08T14:36:12.000Z</published>
+    <updated>2026-02-01T17:00:27.105Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>前几天考了A证操作证，今天操作证编号到了，开始搞设台的事情，于是开了本文章用于记录自己在业余无线电方面的日程经历。</p><h2 id="操作证考试-25-11-8"><a href="#操作证考试-25-11-8" class="headerlink" title="操作证考试-25.11.8"></a>操作证考试-25.11.8</h2><p>大概高中的时候就对业余无线电略有耳闻，这学期<del>上来发现身边一堆HAM于是</del>多了解了下业余无线电这个圈子，听说考试难度不高决定考个A证试试水玩一下。报了25年下半年西安的A证考试。</p><p>直到考前两天才开始刷题，刷题用的是微信小程序“业余无线电工具集”，体验还行。刷完直接去考试了，去了发现考完等半小时可以当场看成绩，以39&#x2F;40的成绩过了&#x3D;)<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-HAM/1.png" alt="考场" data-caption="考场" loading="lazy"></p><h2 id="首次SSTV接收-from-BA3PT-首次通联-客席BI9CMB-25-11-10"><a href="#首次SSTV接收-from-BA3PT-首次通联-客席BI9CMB-25-11-10" class="headerlink" title="首次SSTV接收(from BA3PT)&amp;首次通联(客席BI9CMB)-25.11.10"></a>首次SSTV接收(from BA3PT)&amp;首次通联(客席BI9CMB)-25.11.10</h2><p>考完试买的UVK6差不多也到了，到了其实不知道玩什么，正好<a href="https://github.com/Serialist">BA3PT</a>在学校里开了个SSTV接收活动，于是第一次尝试了接收和通联。</p><blockquote><p>频率：438.1MHz<br>模式：SSTV-robot36编码<br>设备：泉盛UVK6，橡胶天线<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-HAM/2.png" alt="img" data-caption="img" loading="lazy"><br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-HAM/3.png" alt="img" data-caption="img" loading="lazy"></p></blockquote><p>然后当晚用BI9CMB的呼号和BA3PT进行了第一次通联，好玩&#x3D;)</p><h2 id="设台-25-11-17"><a href="#设台-25-11-17" class="headerlink" title="设台-25.11.17"></a>设台-25.11.17</h2><p>考完证就该设台了，据说西安设台贼慢要好几个月，于是找了<a href="https://blog.bi7khi.xyz/">BI7KHI</a>，看了他的<a href="https://gdutham.bi7khi.xyz/zh/ham-quickstart/get-license">指南</a>，填报申请了广州的设台，据说是三天左右能解决。</p><p>最终填报的潮州的设台审理，可能小城市原因速度极快，17号中午填的信息下午就给我两小时速通了，获得重要道具之呼号</p><div style="    background: linear-gradient(135deg, #00b894, #009bc5);    padding: 60px 170px;    border-radius: 25px;    text-align: center;    display: flex;    justify-content: center;    align-items: center;    margin: 0 auto;    width: fit-content;    box-shadow:         0 0 30px rgba(0, 184, 148, 0.6),        0 0 60px rgba(9, 132, 227, 0.4);">    <span style="        font-size: 60px;        font-weight: bold;        color: #ffffff;        text-shadow: 0 2px 4px rgba(0,0,0,0.2);    ">BG7OFD</span></div><p>XD<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-HAM/4.png" alt="img" data-caption="img" loading="lazy"><br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-HAM/5.jpg" alt="img" data-caption="img" loading="lazy"></p><p>注册了<a href="https://www.qrz.com/db/BG7OFD">QRZ</a>网站账号。</p><h2 id="QSL卡设计-25-11-23"><a href="#QSL卡设计-25-11-23" class="headerlink" title="QSL卡设计-25.11.23"></a>QSL卡设计-25.11.23</h2><p>画了QSL卡。</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-HAM/6.png" alt="img" data-caption="img" loading="lazy"><br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-HAM/7.png" alt="img" data-caption="img" loading="lazy"></p><h2 id="首次卫星SSTV接收-RS40S-25-11-29"><a href="#首次卫星SSTV接收-RS40S-25-11-29" class="headerlink" title="首次卫星SSTV接收-RS40S-25.11.29"></a>首次卫星SSTV接收-RS40S-25.11.29</h2><p>通过<a href="https://mp.weixin.qq.com/s/sak89dvxLxe7efDIJVDeIg">推文</a>了解到了信息，在29号晚九点半左右成功使用原装天线就收到了基本可用的图像，虽然有一些噪声。</p><blockquote><p>频率：437.625 MHz<br>模式：SSTV-robot36编码<br>设备：设备：泉盛UVK6，橡胶天线<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-HAM/8.png" alt="img" data-caption="img" loading="lazy"><br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-HAM/9.png" alt="img" data-caption="img" loading="lazy"></p></blockquote><p>不过后续还是想搞个八木天线试试……</p><hr><center>-本文持续更新-</center><p>最后更新于：2025&#x2F;12&#x2F;05</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>前几天考了A证操作证，今天操作证编号到了，开始搞设台的事情，于是开了本文章用于记录自己在业余无线电方面的日程经历。</p><h2 id="操作证考试-25-11-8"><a href="#操作证考试-25-11-8" class="headerlink" title="操作证考试-25.11.8"></a>操作证考试-25.11.8</h2><p>大概高中的时候就对业余无线电略有耳闻，这学期<del>上来发现身边一堆HAM于是</del>多了解了下业余无线电这个圈子，听说考试难度不高决定考个A证试试水玩一下。报了25年下半年西安的A证考试。</p><p>直到考前两天才开始刷题，刷题用的是微信小程序“业余无线电工具集”，体验还行。刷完直接去考试了，去了发现考完等半小时可以当场看成绩，以39&#x2F;40的成绩过了&#x3D;)<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-HAM/1.png" alt="考场" data-caption="考场" loading="lazy"></p><h2 id="首次SSTV接收-from-BA3PT-首次通联-客席BI9CMB-25-11-10"><a href="#首次SSTV接收-from-BA3PT-首次通联-客席BI9CMB-25-11-10" class="headerlink" title="首次SSTV接收(from BA3PT)&amp;首次通联(客席BI9CMB)-25.11.10"></a>首次SSTV接收(from BA3PT)&amp;首次通联(客席BI9CMB)-25.11.10</h2><p>考完试买的UVK6差不多也到了，到了其实不知道玩什么，正好<a href="https://github.com/Serialist">BA3PT</a>在学校里开了个SSTV接收活动，于是第一次尝试了接收和通联。</p><blockquote><p>频率：438.1MHz<br>模式：SSTV-robot36编码<br>设备：泉盛UVK6，橡胶天线<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-HAM/2.png" alt="img" data-caption="img" loading="lazy"><br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-HAM/3.png" alt="img" data-caption="img" loading="lazy"></p></blockquote><p>然后当晚用BI9CMB的呼号和BA3PT进行了第一次通联，好玩&#x3D;)</p><h2 id="设台-25-11-17"><a href="#设台-25-11-17" class="headerlink" title="设台-25.11.17"></a>设台-25.11.17</h2><p>考完证就该设台了，据说西安设台贼慢要好几个月，于是找了<a href="https://blog.bi7khi.xyz/">BI7KHI</a>，看了他的<a href="https://gdutham.bi7khi.xyz/zh/ham-quickstart/get-license">指南</a>，填报申请了广州的设台，据说是三天左右能解决。</p><p>最终填报的潮州的设台审理，可能小城市原因速度极快，17号中午填的信息下午就给我两小时速通了，获得重要道具之呼号</p><div style="    background: linear-gradient(135deg, #00b894, #009bc5);    padding: 60px 170px;    border-radius: 25px;    text-align: center;    display: flex;    justify-content: center;    align-items: center;    margin: 0 auto;    width: fit-content;    box-shadow:         0 0 30px rgba(0, 184, 148, 0.6),        0 0 60px rgba(9, 132, 227, 0.4);">    <span style="        font-size: 60px;        font-weight: bold;        color: #ffffff;        text-shadow: 0 2px 4px rgba(0,0,0,0.2);    ">BG7OFD</span></div><p>XD<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-HAM/4.png" alt="img" data-caption="img" loading="lazy"><br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-HAM/5.jpg" alt="img" data-caption="img" loading="lazy"></p><p>注册了<a href="https://www.qrz.com/db/BG7OFD">QRZ</a>网站账号。</p><h2 id="QSL卡设计-25-11-23"><a href="#QSL卡设计-25-11-23" class="headerlink" title="QSL卡设计-25.11.23"></a>QSL卡设计-25.11.23</h2><p>画了QSL卡。</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-HAM/6.png" alt="img" data-caption="img" loading="lazy"><br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-HAM/7.png" alt="img" data-caption="img" loading="lazy"></p><h2 id="首次卫星SSTV接收-RS40S-25-11-29"><a href="#首次卫星SSTV接收-RS40S-25-11-29" class="headerlink" title="首次卫星SSTV接收-RS40S-25.11.29"></a>首次卫星SSTV接收-RS40S-25.11.29</h2><p>通过<a href="https://mp.weixin.qq.com/s/sak89dvxLxe7efDIJVDeIg">推文</a>了解到了信息，在29号晚九点半左右成功使用原装天线就收到了基本可用的图像，虽然有一些噪声。</p><blockquote><p>频率：437.625 MHz<br>模式：SSTV-robot36编码<br>设备：设备：泉盛UVK6，橡胶天线<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-HAM/8.png" alt="img" data-caption="img" loading="lazy"><br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-HAM/9.png" alt="img" data-caption="img" loading="lazy"></p></blockquote><p>不过后续还是想搞个八木天线试试……</p><h2 id="买了八木天线-26-2-2"><a href="#买了八木天线-26-2-2" class="headerlink" title="买了八木天线-26.2.2"></a>买了八木天线-26.2.2</h2><p>买了个U2V3的八木天线，测试了中继台OK，改天测测卫星SSTV和通联。<br><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Daily-HAM/10.jpg" alt="img" data-caption="img" loading="lazy"></p><hr><center>-本文持续更新-</center><p>最后更新于：2026-02-02</p>]]></content>
     
     
       
