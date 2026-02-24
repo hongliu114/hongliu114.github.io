@@ -6,7 +6,7 @@
   <link href="https://hongliu.icu/rss.xml" rel="self"/>
   
   <link href="https://hongliu.icu/"/>
-  <updated>2026-02-17T09:44:39.462Z</updated>
+  <updated>2026-02-24T08:09:59.268Z</updated>
   <id>https://hongliu.icu/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Note-shudian</title>
+    <link href="https://hongliu.icu/2026/02/Note-shudian/"/>
+    <id>https://hongliu.icu/2026/02/Note-shudian/</id>
+    <published>2026-02-24T07:58:32.000Z</published>
+    <updated>2026-02-24T08:09:59.268Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>内容：数字电路技术基础</p><p>使用课本：《数字电子技术基础》；ISBN 待补充</p><p>学习途径：课内</p><p>由于本网站主题不支持Latex且我使用的笔记软件Obsidian，笔记在网站中图片、公式等部分显示异常，故提供md笔记的网盘链接和PDF导出文件可供下载。</p><p>​<a href="https://pan.baidu.com/s/1S4KFUthKZo1sBS2EW8aa6w?pwd=3508">md笔记百度网盘链接|密码3508</a></p><p>​<a href="/pdf/%E6%95%B0%E7%94%B5_%E6%80%BB%E7%AC%94%E8%AE%B0.pdf">数电_总笔记</a></p><p><em>md笔记建议使用Obsidian查阅，附件存放路径设置为“当前文件所在文件夹下指定的子文件夹”，子文件夹名称为assets</em><br><em>完整各科笔记可前往<a href="https://github.com/hongliu114/General-M-P-Base">Github笔记仓库</a>查看</em></p></blockquote><p>下面提供部分笔记预览。</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Note-shudian/1.png" alt="image" data-caption="image" loading="lazy"></p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/Note-shudian/2.png" alt="image" data-caption="image" loading="lazy"></p><hr>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;内容：数字电路技术基础&lt;/p&gt;
+&lt;p&gt;使用课本：《数字电子技术基础》；ISBN 待补充&lt;/p&gt;
+&lt;p&gt;学习途径：课内&lt;/p&gt;
+&lt;p&gt;由于本网站主题不支持Latex且我使用的笔记软件Obsidian，笔记在网站中图片、公式等部分显示异常，故提供md笔</summary>
+      
+    
+    
+    
+    <category term="知识笔记" scheme="https://hongliu.icu/categories/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="电子" scheme="https://hongliu.icu/tags/%E7%94%B5%E5%AD%90/"/>
+    
+    <category term="数电" scheme="https://hongliu.icu/tags/%E6%95%B0%E7%94%B5/"/>
+    
+  </entry>
   
   <entry>
     <title>纪念三位不再见的老师</title>
@@ -562,38 +592,6 @@
     <category term="数学" scheme="https://hongliu.icu/tags/%E6%95%B0%E5%AD%A6/"/>
     
     <category term="复变" scheme="https://hongliu.icu/tags/%E5%A4%8D%E5%8F%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>【知识笔记】模拟电子技术基础</title>
-    <link href="https://hongliu.icu/2025/08/Note_modian/"/>
-    <id>https://hongliu.icu/2025/08/Note_modian/</id>
-    <published>2025-08-17T05:04:33.000Z</published>
-    <updated>2025-08-20T10:21:06.789Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>内容：模拟电子技术基础（模电）</p><p>使用课本：《模拟电子技术基础》；ISBN 978-7-5606-6527-6</p><p>学习途径：课内</p><p>由于本网站主题不支持Latex且我使用的笔记软件Obsidian，笔记在网站中图片、公式等部分显示异常，故提供md笔记的网盘链接和PDF导出文件可供下载。</p><p>​<a href="https://pan.baidu.com/s/1blVdg82IySGEJjbl0s9ZKQ?pwd=yp8s">md笔记百度网盘链接|密码yp8s</a></p><p>​<a href="/pdf/%E6%A8%A1%E7%94%B5_%E6%80%BB%E7%AC%94%E8%AE%B0.pdf">模电_总笔记.pdf</a></p><p><em>md笔记建议使用Obsidian查阅，附件存放路径设置为“当前文件所在文件夹下指定的子文件夹”，子文件夹名称为assets。</em></p></blockquote><p>下面提供部分笔记预览。</p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/post_modian/1.png" alt="1.png" data-caption="1.png" loading="lazy"></p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/post_modian/2.png" alt="2.png" data-caption="2.png" loading="lazy"></p><p><img onerror="imgOnError(this);" data-fancybox="gallery" src="/image/post_modian/3.png" alt="3.png" data-caption="3.png" loading="lazy"></p><hr><p><strong>整理于</strong>：250817</p>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;blockquote&gt;
-&lt;p&gt;内容：模拟电子技术基础（模电）&lt;/p&gt;
-&lt;p&gt;使用课本：《模拟电子技术基础》；ISBN 978-7-5606-6527-6&lt;/p&gt;
-&lt;p&gt;学习途径：课内&lt;/p&gt;
-&lt;p&gt;由于本网站主题不支持Latex且我使用的笔记软件Obsidian，笔记在网站中图</summary>
-      
-    
-    
-    
-    <category term="知识笔记" scheme="https://hongliu.icu/categories/%E7%9F%A5%E8%AF%86%E7%AC%94%E8%AE%B0/"/>
-    
-    
-    <category term="笔记" scheme="https://hongliu.icu/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-    <category term="电子" scheme="https://hongliu.icu/tags/%E7%94%B5%E5%AD%90/"/>
-    
-    <category term="模电" scheme="https://hongliu.icu/tags/%E6%A8%A1%E7%94%B5/"/>
     
   </entry>
   
