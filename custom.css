@@ -255,3 +255,61 @@ code[class*="language-"] ::selection {
     background: var(--color-highlight) !important;
     color: var(--color-highlight-text) !important;
 }
+
+/* Markdown [!note] 样式兼容 */
+blockquote.md-note {
+    margin: 1.1em 0;
+    padding: 0.85em 1em;
+    border: 1px solid #79c7ff;
+    border-left: 1px solid #79c7ff;
+    border-radius: 12px;
+    background: #f2f9ff;
+}
+
+article blockquote.md-note::before,
+article blockquote.md-note::after {
+    content: none !important;
+    display: none !important;
+}
+
+article blockquote.md-note .md-note-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin: 0 0 0.5em 0;
+    color: #2ea8ff !important;
+}
+
+article blockquote.md-note .md-note-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1.2em;
+    height: 1.2em;
+    border-radius: 50%;
+    background: #2ea8ff !important;
+    color: #ffffff !important;
+    font-size: 0.9em !important;
+    line-height: 1;
+    font-weight: 700 !important;
+    flex-shrink: 0;
+}
+
+article blockquote.md-note .md-note-heading {
+    color: #2ea8ff !important;
+    font-weight: 700 !important;
+    font-size: 1.12em !important;
+    line-height: 1.25;
+}
+
+blockquote.md-note p {
+    margin: 0.35em 0;
+}
+
+blockquote.md-note p:first-child {
+    margin-top: 0;
+}
+
+blockquote.md-note p:last-child {
+    margin-bottom: 0;
+}
