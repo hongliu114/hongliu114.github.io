@@ -284,15 +284,23 @@ article blockquote.md-note .md-note-icon {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-width: 1.2em;
-    height: 1.2em;
-    border-radius: 50%;
-    background: #2ea8ff !important;
-    color: #ffffff !important;
-    font-size: 0.9em !important;
+    width: 1.05em;
+    height: 1.05em;
+    color: #2ea8ff !important;
+    background: transparent !important;
     line-height: 1;
     font-weight: 700 !important;
     flex-shrink: 0;
+}
+
+article blockquote.md-note .md-note-icon svg {
+    width: 1.05em !important;
+    height: 1.05em !important;
+    display: block;
+}
+
+article blockquote.md-note .md-note-icon svg path {
+    fill: currentColor !important;
 }
 
 article blockquote.md-note .md-note-heading {
@@ -311,5 +319,71 @@ blockquote.md-note p:first-child {
 }
 
 blockquote.md-note p:last-child {
+    margin-bottom: 0;
+}
+
+/* Markdown [!tips] 样式兼容 */
+blockquote.md-tips {
+    margin: 1.1em 0;
+    padding: 0.85em 1em;
+    border: 1px solid #ffd84d;
+    border-left: 1px solid #ffd84d;
+    border-radius: 12px;
+    background: #fffbea;
+}
+
+article blockquote.md-tips::before,
+article blockquote.md-tips::after {
+    content: none !important;
+    display: none !important;
+}
+
+article blockquote.md-tips .md-tips-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+    margin: 0 0 0.5em 0;
+    color: #f0b400 !important;
+}
+
+article blockquote.md-tips .md-tips-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1.05em;
+    height: 1.05em;
+    color: #f0b400 !important;
+    background: transparent !important;
+    line-height: 1;
+    font-weight: 700 !important;
+    flex-shrink: 0;
+}
+
+article blockquote.md-tips .md-tips-icon svg {
+    width: 1.05em !important;
+    height: 1.05em !important;
+    display: block;
+}
+
+article blockquote.md-tips .md-tips-icon svg path {
+    fill: currentColor !important;
+}
+
+article blockquote.md-tips .md-tips-heading {
+    color: #f0b400 !important;
+    font-weight: 700 !important;
+    font-size: 1.12em !important;
+    line-height: 1.25;
+}
+
+blockquote.md-tips p {
+    margin: 0.35em 0;
+}
+
+blockquote.md-tips p:first-child {
+    margin-top: 0;
+}
+
+blockquote.md-tips p:last-child {
     margin-bottom: 0;
 }
