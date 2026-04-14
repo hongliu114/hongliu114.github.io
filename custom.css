@@ -387,3 +387,229 @@ blockquote.md-tips p:first-child {
 blockquote.md-tips p:last-child {
     margin-bottom: 0;
 }
+
+/* ========== RSS 订阅邮报样式 (Green Material You) ========== */
+
+:root {
+    --rss-md-bg: #f7fbf4 !important;
+    --rss-md-surface: #f2f6f0 !important;
+    --rss-md-surface-low: #e7eee2 !important;
+    --rss-md-on-surface: #1b2518 !important;
+    --rss-md-on-variant: #4d5f49 !important;
+    --rss-md-outline: #94a889 !important;
+    --rss-md-primary: #6fb439 !important;
+    --rss-md-primary-strong: #4f8f22 !important;
+    --rss-md-primary-container: #d4efbf !important;
+    --rss-md-shadow: rgba(34, 62, 23, 0.14) !important;
+    --rss-md-ease: cubic-bezier(0.2, 0, 0, 1) !important;
+}
+
+.rss-feed-shell {
+    position: relative !important;
+    margin: 22px 0 !important;
+    padding: 18px !important;
+    border-radius: 32px !important;
+    background: transparent !important;
+}
+
+.rss-articles-container {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)) !important;
+    gap: 14px !important;
+}
+
+.rss-article-card {
+    background:
+        radial-gradient(circle at 88% 10%, rgba(152, 225, 79, 0.14) 0%, rgba(152, 225, 79, 0) 45%),
+        rgba(242, 246, 240, 0.97) !important;
+    border-radius: 24px !important;
+    padding: 16px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    border: 1px solid rgba(148, 168, 137, 0.3) !important;
+    box-shadow: 0 4px 12px var(--rss-md-shadow) !important;
+    transition: transform 300ms var(--rss-md-ease), box-shadow 300ms var(--rss-md-ease), background-color 300ms var(--rss-md-ease) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.rss-article-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 14px;
+    bottom: 14px;
+    width: 4px;
+    border-radius: 9999px;
+    background: #7bff00;
+    opacity: 0;
+    transform: translateX(-3px);
+    transition: opacity 220ms var(--rss-md-ease), transform 220ms var(--rss-md-ease) !important;
+}
+
+.rss-article-card::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 14px;
+    bottom: 14px;
+    width: 4px;
+    border-radius: 9999px;
+    background: #7bff00;
+    opacity: 0;
+    transform: translateX(3px);
+    transition: opacity 220ms var(--rss-md-ease), transform 220ms var(--rss-md-ease) !important;
+}
+
+.rss-article-card:hover {
+    transform: translateY(-2px) scale(1.01) !important;
+    box-shadow: 0 10px 22px rgba(34, 62, 23, 0.2) !important;
+    background:
+    radial-gradient(circle at 88% 10%, rgba(152, 225, 79, 0.38) 0%, rgba(152, 225, 79, 0) 45%),
+        #f6faf3 !important;
+}
+
+.rss-article-card:focus-within::before,
+.rss-article-card:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.rss-article-card:focus-within::after,
+.rss-article-card:hover::after {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.rss-article-card:active {
+    transform: scale(0.985) !important;
+}
+
+.rss-article-date {
+    font-size: 0.74rem !important;
+    color: var(--rss-md-on-variant) !important;
+    white-space: nowrap !important;
+}
+
+.rss-article-content {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 8px !important;
+    flex: 1 !important;
+}
+
+.rss-article-title {
+    font-family: "Outfit", "Segoe UI", sans-serif !important;
+    font-size: 1.03rem !important;
+    line-height: 1.35 !important;
+    font-weight: 700 !important;
+    color: var(--rss-md-on-surface) !important;
+    text-decoration: none !important;
+    transition: color 200ms var(--rss-md-ease) !important;
+}
+
+.rss-article-title:hover {
+    color: var(--rss-md-primary-strong) !important;
+}
+
+.rss-article-description {
+    font-size: 0.88rem !important;
+    color: var(--rss-md-on-variant) !important;
+    line-height: 1.58 !important;
+    margin: 0 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    word-break: break-word !important;
+}
+
+.rss-article-footer {
+    margin-top: 12px !important;
+    padding-top: 8px !important;
+    border-top: 1px solid rgba(148, 168, 137, 0.3) !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    min-height: 34px !important;
+    gap: 10px !important;
+}
+
+.rss-article-author-meta {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0 !important;
+    height: 24px !important;
+    min-height: 24px !important;
+    padding: 0 10px !important;
+    border-radius: 9999px !important;
+    background: rgba(111, 180, 57, 0.1) !important;
+    max-width: calc(100% - 84px) !important;
+}
+
+.rss-article-author {
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+    color: var(--rss-md-on-variant) !important;
+    line-height: 24px !important;
+    height: 24px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    min-width: 0 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+}
+
+.rss-article-footer .rss-article-date {
+    flex: 0 0 auto !important;
+}
+
+.rss-articles-empty,
+.rss-error {
+    padding: 32px 18px !important;
+    margin: 20px 0 !important;
+    border-radius: 24px !important;
+    text-align: center !important;
+    color: var(--rss-md-on-variant) !important;
+    background: var(--rss-md-surface) !important;
+    border: 1px solid rgba(148, 168, 137, 0.35) !important;
+}
+
+.rss-articles-empty p,
+.rss-error p {
+    margin: 0 !important;
+}
+
+.rss-feed-shell a:focus-visible,
+.rss-article-title:focus-visible {
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(79, 143, 34, 0.35), 0 0 0 5px rgba(255, 255, 255, 0.7) !important;
+}
+
+@media (max-width: 768px) {
+    .rss-feed-shell {
+        border-radius: 24px !important;
+        padding: 14px !important;
+    }
+
+    .rss-articles-container {
+        grid-template-columns: 1fr !important;
+    }
+
+    .rss-article-card {
+        border-radius: 20px !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rss-article-card,
+    .rss-article-title {
+        transition: none !important;
+    }
+
+    .rss-article-card:hover,
+    .rss-article-card:active {
+        transform: none !important;
+    }
+}
