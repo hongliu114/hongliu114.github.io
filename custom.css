@@ -613,3 +613,158 @@ blockquote.md-tips p:last-child {
         transform: none !important;
     }
 }
+
+/* {% links %} 友链卡片：固定高度 + 悬停向右扩展 */
+article.nexmoe-py .nexmoe-py ul {
+    margin: -6px !important;
+}
+
+article.nexmoe-py .nexmoe-py ul li {
+    width: calc(16.6666666667% - 12px) !important;
+    height: auto !important;
+    aspect-ratio: 1 / 1 !important;
+    margin: 6px !important;
+    border-radius: 12px !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+    position: relative !important;
+    z-index: 1 !important;
+    transition: transform 280ms cubic-bezier(0.2, 0, 0, 1) !important;
+}
+
+article.nexmoe-py .nexmoe-py ul li > a {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    padding-top: 0 !important;
+    border-radius: 12px !important;
+    position: relative !important;
+    overflow: hidden !important;
+    background: #f2f6f0 !important;
+    box-shadow: 0 0 0 1px #d7e5cf !important;
+    transition: width 280ms cubic-bezier(0.2, 0, 0, 1), box-shadow 280ms cubic-bezier(0.2, 0, 0, 1), background-color 280ms cubic-bezier(0.2, 0, 0, 1) !important;
+}
+
+/* 覆盖主题默认底部遮罩 */
+article.nexmoe-py .nexmoe-py ul li > a:before {
+    content: "" !important;
+    position: absolute !important;
+    inset: 0 !important;
+    height: auto !important;
+    width: auto !important;
+    left: 0 !important;
+    bottom: 0 !important;
+    opacity: 0 !important;
+    pointer-events: none !important;
+    background:
+        radial-gradient(circle at 2px 10px, #7bff00 0 2px, transparent 2.1px) left 0 top 0 / 4px 100% no-repeat,
+        radial-gradient(circle at 2px calc(100% - 10px), #7bff00 0 2px, transparent 2.1px) left 0 top 0 / 4px 100% no-repeat,
+        linear-gradient(#7bff00, #7bff00) left 0 top 10px / 4px calc(100% - 20px) no-repeat,
+        radial-gradient(circle at 88% 14%, rgba(152, 225, 79, 0.3) 0%, rgba(152, 225, 79, 0) 44%),
+        transparent !important;
+    transition: opacity 280ms cubic-bezier(0.2, 0, 0, 1) !important;
+    z-index: 1 !important;
+}
+
+/* 覆盖主题默认标题叠在头像上，改为右侧显示 */
+article.nexmoe-py .nexmoe-py ul li > a::after {
+    content: attr(title) !important;
+    position: absolute !important;
+    left: 86px !important;
+    right: 14px !important;
+    top: calc(50% - 7px) !important;
+    transform: translateY(-50%) !important;
+    padding: 0 !important;
+    border: none !important;
+    text-align: left !important;
+    color: #284b22 !important;
+    font-size: 18px !important;
+    font-weight: 600 !important;
+    line-height: 1.28 !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    opacity: 0 !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+    transition: opacity 220ms cubic-bezier(0.2, 0, 0, 1) !important;
+}
+
+article.nexmoe-py .nexmoe-py ul li > a .py-link-des {
+    position: absolute !important;
+    left: 86px !important;
+    right: 14px !important;
+    top: calc(50%) !important;
+    transform: none !important;
+    color: rgba(40, 75, 34, 0.7) !important;
+    font-size: 11px !important;
+    line-height: 1.2 !important;
+    display: -webkit-box !important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    word-break: break-word !important;
+    opacity: 0 !important;
+    z-index: 2 !important;
+    pointer-events: none !important;
+    transition: opacity 220ms cubic-bezier(0.2, 0, 0, 1) !important;
+}
+
+article.nexmoe-py .nexmoe-py ul li img {
+    width: 58px !important;
+    height: 58px !important;
+    position: absolute !important;
+    left: 10px !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    border-radius: 9999px !important;
+    object-fit: cover !important;
+    border: 2px solid rgba(79, 143, 34, 0.22) !important;
+    z-index: 3 !important;
+    pointer-events: none !important;
+    transition: width 280ms cubic-bezier(0.2, 0, 0, 1), height 280ms cubic-bezier(0.2, 0, 0, 1), left 280ms cubic-bezier(0.2, 0, 0, 1), top 280ms cubic-bezier(0.2, 0, 0, 1), transform 280ms cubic-bezier(0.2, 0, 0, 1) !important;
+}
+
+/* 未展开状态：头像居中并放大到卡片约 80% */
+article.nexmoe-py .nexmoe-py ul li:not(:hover) img {
+    width: 85% !important;
+    height: 85% !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
+
+article.nexmoe-py .nexmoe-py ul li:hover {
+    z-index: 15 !important;
+}
+
+article.nexmoe-py .nexmoe-py ul li:hover > a {
+    width: calc(200% + 12px) !important;
+    background: #f4f9f1 !important;
+    box-shadow: 0 8px 20px rgba(34, 62, 23, 0.16) !important;
+}
+
+/* 6 列布局中，最右一列展开时向左平移一个展开距离，避免超出容器右边缘 */
+article.nexmoe-py .nexmoe-py ul li:nth-child(6n):hover {
+    transform: translateX(calc(-100% - 12px)) !important;
+}
+
+article.nexmoe-py .nexmoe-py ul li:hover > a:before,
+article.nexmoe-py .nexmoe-py ul li:hover > a::after {
+    opacity: 1 !important;
+}
+
+article.nexmoe-py .nexmoe-py ul li:hover > a .py-link-des {
+    opacity: 1 !important;
+}
+
+@media screen and (max-width: 768px) {
+    article.nexmoe-py .nexmoe-py ul li {
+        width: calc(33.3333333333% - 12px) !important;
+        height: auto !important;
+    }
+
+    article.nexmoe-py .nexmoe-py ul li:hover > a {
+        width: 100% !important;
+    }
+}
