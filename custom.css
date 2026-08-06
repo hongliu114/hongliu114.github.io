@@ -768,3 +768,131 @@ article.nexmoe-py .nexmoe-py ul li:hover > a .py-link-des {
         width: 100% !important;
     }
 }
+
+/* ========== 首页站点统计栏 (Green Material You) ========== */
+
+:root {
+    --stats-surface: #f2f6f0;
+    --stats-on-surface: #1b2518;
+    --stats-on-variant: #4d5f49;
+    --stats-primary: #6fb439;
+    --stats-primary-strong: #4f8f22;
+    --stats-shadow: rgba(34, 62, 23, 0.14);
+    --stats-ease: cubic-bezier(0.2, 0, 0, 1);
+}
+
+.site-stats-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 8px 0 24px 0;
+    padding: 6px 0;
+}
+
+.site-stats-item {
+    background:
+        radial-gradient(circle at 88% 10%, rgba(152, 225, 79, 0.14) 0%, rgba(152, 225, 79, 0) 45%),
+        rgba(242, 246, 240, 0.97);
+    border-radius: 20px;
+    padding: 14px 32px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    border: 1px solid rgba(148, 168, 137, 0.3);
+    box-shadow: 0 4px 12px var(--stats-shadow);
+    transition: transform 300ms var(--stats-ease), box-shadow 300ms var(--stats-ease), background-color 300ms var(--stats-ease);
+    position: relative;
+    overflow: hidden;
+    min-width: 120px;
+}
+
+.site-stats-item::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 12px;
+    bottom: 12px;
+    width: 4px;
+    border-radius: 9999px;
+    background: #7bff00;
+    opacity: 0;
+    transform: translateX(-3px);
+    transition: opacity 220ms var(--stats-ease), transform 220ms var(--stats-ease);
+}
+
+.site-stats-item:hover {
+    transform: translateY(-2px) scale(1.03);
+    box-shadow: 0 10px 22px rgba(34, 62, 23, 0.2);
+    background:
+        radial-gradient(circle at 88% 10%, rgba(152, 225, 79, 0.38) 0%, rgba(152, 225, 79, 0) 45%),
+        #f6faf3;
+}
+
+.site-stats-item:hover::before {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.site-stats-item:active {
+    transform: scale(0.985);
+}
+
+.site-stats-num {
+    font-family: "Outfit", "Segoe UI", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: var(--stats-on-surface);
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+}
+
+.site-stats-label {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--stats-on-variant);
+    line-height: 1;
+}
+
+.site-stats-divider {
+    width: 1px;
+    height: 40px;
+    background: rgba(148, 168, 137, 0.3);
+    border-radius: 9999px;
+    flex-shrink: 0;
+}
+
+/* 响应式 */
+@media (max-width: 640px) {
+    .site-stats-bar {
+        flex-direction: column;
+        gap: 10px;
+        margin: 4px 0 20px 0;
+    }
+
+    .site-stats-divider {
+        width: 60px;
+        height: 1px;
+    }
+
+    .site-stats-item {
+        padding: 12px 28px;
+        min-width: 0;
+        border-radius: 18px;
+    }
+
+    .site-stats-num {
+        font-size: 1.5rem;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-stats-item {
+        transition: none;
+    }
+
+    .site-stats-item:hover {
+        transform: none;
+    }
+}
